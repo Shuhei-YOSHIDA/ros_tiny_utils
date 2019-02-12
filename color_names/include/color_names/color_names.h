@@ -10,7 +10,8 @@ namespace color_names
 {
 std_msgs::ColorRGBA makeColorMsg(std::string preset_name, double alpha=1.0);
 
-std::map<std::string, std::array<double, 3>> color_name_dict
+///@todo Read data from text data?
+const std::map<std::string, std::array<float, 3>> COLOR_NAME_DICT
 {
   //{"COLOR_NAME", {R, G, B}} //template
   {"RED", {1., 0., 0.}},
@@ -24,8 +25,8 @@ std_msgs::ColorRGBA makeColorMsg(std::string preset_name, double alpha)
   if (c_msg.a < 0.) c_msg.a = 0.;
   if (c_msg.a > 1.) c_msg.a = 1.;
 
-  auto found_itr = color_name_dict.find(preset_name);
-  if (found_itr != color_name_dict.end())
+  auto found_itr = COLOR_NAME_DICT.find(preset_name);
+  if (found_itr != COLOR_NAME_DICT.end())
   {
     c_msg.r = found_itr->second[0];
     c_msg.g = found_itr->second[1];
