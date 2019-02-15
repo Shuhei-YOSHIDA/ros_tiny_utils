@@ -11,7 +11,18 @@ namespace easy_marker
 visualization_msgs::Marker makeMarkerTemplate(int preset_type);
 
 // Particular markers
-visualization_msgs::Marker makeMarkerARROWTemplate();
+visualization_msgs::Marker makeMarkerARROWTemplate(std::string frame_id="base_link");
+visualization_msgs::Marker makeMarkerCUBETemplate(std::string frame_id="base_link");
+visualization_msgs::Marker makeMarkerSPHERETemplate(std::string frame_id="base_link");
+visualization_msgs::Marker makeMarkerCYLINDERTemplate(std::string frame_id="base_link");
+visualization_msgs::Marker makeMarkerLINE_STRIPTemplate(std::string frame_id="base_link");
+visualization_msgs::Marker makeMarkerLINE_LISTTemplate(std::string frame_id="base_link");
+visualization_msgs::Marker makeMarkerCUBE_LISTTemplate(std::string frame_id="base_link");
+visualization_msgs::Marker makeMarkerSPHERE_LISTTemplate(std::string frame_id="base_link");
+visualization_msgs::Marker makeMarkerPOINTSTemplate(std::string frame_id="base_link");
+visualization_msgs::Marker makeMarkerTEXT_VIEW_FACINGTemplate(std::string frame_id="base_link");
+visualization_msgs::Marker makeMarkerMESH_RESOURCETemplate(std::string frame_id="base_link");
+visualization_msgs::Marker makeMarkerTRIANGLE_LISTTemplate(std::string frame_id="base_link");
 
 // Fundamental method
 visualization_msgs::Marker makeMarkerTemplate
@@ -59,6 +70,49 @@ visualization_msgs::Marker makeMarkerTemplate(std::string preset_type)
 
   return mrk_msg;
 }
+
+visualization_msgs::Marker makeMarkerARROWTemplate(std::string frame_id)
+{
+  std::vector<geometry_msgs::Point> points;
+  std::vector<std_msgs::ColorRGBA> colors;
+  geometry_msgs::Pose pose;
+  pose.orientation.w = 1;
+  geometry_msgs::Vector3 scale;
+  scale.x = scale.y = scale.z = 0.1;
+  std_msgs::ColorRGBA color;
+  color.r = 1; color.a = 1;
+
+  return makeMarkerTemplate
+ (
+    frame_id,
+    "",
+    0,
+    visualization_msgs::Marker::ARROW,
+    visualization_msgs::Marker::ADD,
+    pose,
+    scale,
+    color,
+    ros::Duration(),
+    false,
+    points,
+    colors,
+    "",
+    "",
+    false
+  );
+}
+//visualization_msgs::Marker makeMarkerCUBETemplate(std::string frame_id);
+//visualization_msgs::Marker makeMarkerSPHERETemplate(std::string frame_id);
+//visualization_msgs::Marker makeMarkerCYLINDERTemplate(std::string frame_id);
+//visualization_msgs::Marker makeMarkerLINE_STRIPTemplate(std::string frame_id);
+//visualization_msgs::Marker makeMarkerLINE_LISTTemplate(std::string frame_id);
+//visualization_msgs::Marker makeMarkerCUBE_LISTTemplate(std::string frame_id);
+//visualization_msgs::Marker makeMarkerSPHERE_LISTTemplate(std::string frame_id);
+//visualization_msgs::Marker makeMarkerPOINTSTemplate(std::string frame_id);
+//visualization_msgs::Marker makeMarkerTEXT_VIEW_FACINGTemplate(std::string frame_id);
+//visualization_msgs::Marker makeMarkerMESH_RESOURCETemplate(std::string frame_id);
+//visualization_msgs::Marker makeMarkerTRIANGLE_LISTTemplate(std::string frame_id);
+
 
 
 } // namespace easy_marker
