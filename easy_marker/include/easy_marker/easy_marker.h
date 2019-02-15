@@ -7,5 +7,58 @@
 
 namespace easy_marker
 {
-visualization_msgs::Marker makeMarkerTemplate(std::string preset_type);
+// For template
+visualization_msgs::Marker makeMarkerTemplate(int preset_type);
+
+// Particular markers
+visualization_msgs::Marker makeMarkerARROWTemplate();
+
+// Fundamental method
+visualization_msgs::Marker makeMarkerTemplate
+ (
+    std::string frame_id,
+    std::string ns,
+    int id,
+    int type,
+    int action,
+    geometry_msgs::Pose pose,
+    geometry_msgs::Vector3 scale,
+    std_msgs::ColorRGBA color,
+    ros::Duration lifetime,
+    bool frame_locked,
+    const std::vector<geometry_msgs::Point>& points,
+    const std::vector<std_msgs::ColorRGBA>& colors,
+    std::string text,
+    std::string mesh_resource,
+    bool mesh_use_embedded_materials
+  )
+{
+  visualization_msgs::Marker mrk_msg;
+  mrk_msg.header.frame_id = frame_id;
+  mrk_msg.ns = ns;
+  mrk_msg.id = id;
+  mrk_msg.type = type;
+  mrk_msg.action = action;
+  mrk_msg.pose = pose;
+  mrk_msg.scale = scale;
+  mrk_msg.color = color;
+  mrk_msg.lifetime = lifetime;
+  mrk_msg.frame_locked = frame_locked;
+  mrk_msg.points = points;
+  mrk_msg.colors = colors;
+  mrk_msg.text = text;
+  mrk_msg.mesh_resource = mesh_resource;
+  mrk_msg.mesh_use_embedded_materials = mesh_use_embedded_materials;
+
+  return mrk_msg;
+}
+
+visualization_msgs::Marker makeMarkerTemplate(std::string preset_type)
+{
+  visualization_msgs::Marker mrk_msg;
+
+  return mrk_msg;
+}
+
+
 } // namespace easy_marker
