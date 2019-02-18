@@ -14,7 +14,7 @@ std_msgs::ColorRGBA makeColorMsg(std::string preset_name, double alpha=1.0);
 const std::map<std::string, std::array<float, 3>> COLOR_NAME_DICT
 {
   //{"COLOR_NAME", {R, G, B}} //template
-  {"RED", {1., 0., 0.}},
+  {"red", {1., 0., 0.}},
   {"ERROR", {0, 0, 0}}
 };
 
