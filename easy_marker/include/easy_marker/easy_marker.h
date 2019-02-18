@@ -4,6 +4,7 @@
 
 #pragma once
 #include <visualization_msgs/Marker.h>
+#include "color_names/color_names.h"
 
 namespace easy_marker
 {
@@ -11,7 +12,7 @@ namespace easy_marker
 visualization_msgs::Marker makeMarkerTemplate(int preset_type);
 
 // Particular markers
-visualization_msgs::Marker makeMarkerARROWTemplate(std::string frame_id="base_link");
+visualization_msgs::Marker makeMarkerARROWTemplate(double scale=1.0, std::string color_name="red", std::string frame_id="base_link");
 visualization_msgs::Marker makeMarkerCUBETemplate(std::string frame_id="base_link");
 visualization_msgs::Marker makeMarkerSPHERETemplate(std::string frame_id="base_link");
 visualization_msgs::Marker makeMarkerCYLINDERTemplate(std::string frame_id="base_link");
@@ -71,16 +72,19 @@ visualization_msgs::Marker makeMarkerTemplate(std::string preset_type)
   return mrk_msg;
 }
 
-visualization_msgs::Marker makeMarkerARROWTemplate(std::string frame_id)
+visualization_msgs::Marker makeMarkerARROWTemplate(double scale, std::string color_name, std::string frame_id)
 {
+  if (scale <= 0) scale = 1.0;
   std::vector<geometry_msgs::Point> points;
   std::vector<std_msgs::ColorRGBA> colors;
   geometry_msgs::Pose pose;
   pose.orientation.w = 1;
-  geometry_msgs::Vector3 scale;
-  scale.x = scale.y = scale.z = 0.1;
-  std_msgs::ColorRGBA color;
-  color.r = 1; color.a = 1;
+  geometry_msgs::Vector3 scale3;
+  scale3.x = scale3.y = scale3.z = 0.1;
+  scale3.x*=scale;
+  scale3.y*=scale;
+  scale3.z*=scale;
+  std_msgs::ColorRGBA color = color_names::makeColorMsg(color_name);
 
   return makeMarkerTemplate
  (
@@ -90,7 +94,7 @@ visualization_msgs::Marker makeMarkerARROWTemplate(std::string frame_id)
     visualization_msgs::Marker::ARROW,
     visualization_msgs::Marker::ADD,
     pose,
-    scale,
+    scale3,
     color,
     ros::Duration(),
     false,

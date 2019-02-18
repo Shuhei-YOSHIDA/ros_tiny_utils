@@ -10,6 +10,7 @@ add_compile_options(-std=c++11)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   visualization_msgs
+  color_names
 )
 
 ## System dependencies are found with CMake's conventions
@@ -102,8 +103,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES easy_marker
+  INCLUDE_DIRS include
+  LIBRARIES easy_marker
 #  CATKIN_DEPENDS other_catkin_pkg
 #  DEPENDS system_lib
 )
