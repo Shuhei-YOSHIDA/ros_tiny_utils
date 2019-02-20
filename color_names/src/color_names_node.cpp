@@ -20,12 +20,14 @@ int main(int argc, char** argv)
   color_mrk.scale.x = color_mrk.scale.y = color_mrk.scale.z = 0.050;
   color_mrk.id = 0;
   int id = 1;
-  int count = 1;
+  int count = 0;
   for (auto&& data : COLOR_NAME_DICT)
   {
     geometry_msgs::Point p;
     ///@todo set points in good way, May be need to sort color data by names
-    p.x = 0.10*count;
+    p.x = 0.10*(count%10);
+    p.y = 0.10*(count/10);
+    count++;
 
     Marker m_txt;
     m_txt.header.frame_id = "/base_link";
@@ -41,7 +43,6 @@ int main(int argc, char** argv)
     mrks_msg.markers.push_back(m_txt);
 
     color_mrk.colors.push_back(makeColorMsg(data.first, 1.0));
-    count++;
     color_mrk.points.push_back(p);
   }
   mrks_msg.markers.push_back(color_mrk);
