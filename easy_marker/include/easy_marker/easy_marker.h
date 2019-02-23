@@ -12,18 +12,21 @@ namespace easy_marker
 visualization_msgs::Marker makeMarkerTemplate(int preset_type);
 
 // Particular markers
-visualization_msgs::Marker makeMarkerARROWTemplate(double scale=1.0, std::string color_name="red", std::string frame_id="base_link");
-visualization_msgs::Marker makeMarkerCUBETemplate(std::string frame_id="base_link");
-visualization_msgs::Marker makeMarkerSPHERETemplate(std::string frame_id="base_link");
-visualization_msgs::Marker makeMarkerCYLINDERTemplate(std::string frame_id="base_link");
-visualization_msgs::Marker makeMarkerLINE_STRIPTemplate(std::string frame_id="base_link");
-visualization_msgs::Marker makeMarkerLINE_LISTTemplate(std::string frame_id="base_link");
-visualization_msgs::Marker makeMarkerCUBE_LISTTemplate(std::string frame_id="base_link");
-visualization_msgs::Marker makeMarkerSPHERE_LISTTemplate(std::string frame_id="base_link");
-visualization_msgs::Marker makeMarkerPOINTSTemplate(std::string frame_id="base_link");
-visualization_msgs::Marker makeMarkerTEXT_VIEW_FACINGTemplate(std::string frame_id="base_link");
-visualization_msgs::Marker makeMarkerMESH_RESOURCETemplate(std::string frame_id="base_link");
-visualization_msgs::Marker makeMarkerTRIANGLE_LISTTemplate(std::string frame_id="base_link");
+visualization_msgs::Marker makeMarkerARROWTemplate(
+    double scale=1.0, std::string color_name="red", std::string frame_id="base_link");
+visualization_msgs::Marker makeMarkerCUBETemplate(
+    double scale=1.0, std::string color_name="red", std::string frame_id="base_link");
+visualization_msgs::Marker makeMarkerSPHERETemplate(
+    double scale=1.0, std::string color_name="red", std::string frame_id="base_link");
+//visualization_msgs::Marker makeMarkerCYLINDERTemplate(std::string frame_id="base_link");
+//visualization_msgs::Marker makeMarkerLINE_STRIPTemplate(std::string frame_id="base_link");
+//visualization_msgs::Marker makeMarkerLINE_LISTTemplate(std::string frame_id="base_link");
+//visualization_msgs::Marker makeMarkerCUBE_LISTTemplate(std::string frame_id="base_link");
+//visualization_msgs::Marker makeMarkerSPHERE_LISTTemplate(std::string frame_id="base_link");
+//visualization_msgs::Marker makeMarkerPOINTSTemplate(std::string frame_id="base_link");
+//visualization_msgs::Marker makeMarkerTEXT_VIEW_FACINGTemplate(std::string frame_id="base_link");
+//visualization_msgs::Marker makeMarkerMESH_RESOURCETemplate(std::string frame_id="base_link");
+//visualization_msgs::Marker makeMarkerTRIANGLE_LISTTemplate(std::string frame_id="base_link");
 
 // Fundamental method
 visualization_msgs::Marker makeMarkerTemplate
@@ -72,7 +75,8 @@ visualization_msgs::Marker makeMarkerTemplate(std::string preset_type)
   return mrk_msg;
 }
 
-visualization_msgs::Marker makeMarkerARROWTemplate(double scale, std::string color_name, std::string frame_id)
+visualization_msgs::Marker makeMarkerARROWTemplate(
+    double scale, std::string color_name, std::string frame_id)
 {
   if (scale <= 0) scale = 1.0;
   std::vector<geometry_msgs::Point> points;
@@ -80,7 +84,9 @@ visualization_msgs::Marker makeMarkerARROWTemplate(double scale, std::string col
   geometry_msgs::Pose pose;
   pose.orientation.w = 1;
   geometry_msgs::Vector3 scale3;
-  scale3.x = scale3.y = scale3.z = 0.1;
+  scale3.x = 0.1;
+  scale3.y = 0.01;
+  scale3.z = 0.01;
   scale3.x*=scale;
   scale3.y*=scale;
   scale3.z*=scale;
@@ -105,6 +111,76 @@ visualization_msgs::Marker makeMarkerARROWTemplate(double scale, std::string col
     false
   );
 }
+
+visualization_msgs::Marker makeMarkerCUBETemplate(
+    double scale, std::string color_name, std::string frame_id)
+{
+  if (scale <= 0) scale = 1.0;
+  std::vector<geometry_msgs::Point> points;
+  std::vector<std_msgs::ColorRGBA> colors;
+  geometry_msgs::Pose pose;
+  pose.orientation.w = 1;
+  geometry_msgs::Vector3 scale3;
+  scale3.x = scale3.y = scale3.z = 0.1;
+  scale3.x*=scale;
+  scale3.y*=scale;
+  scale3.z*=scale;
+  std_msgs::ColorRGBA color = color_names::makeColorMsg(color_name);
+
+  return makeMarkerTemplate
+ (
+    frame_id,
+    "",
+    0,
+    visualization_msgs::Marker::CUBE,
+    visualization_msgs::Marker::ADD,
+    pose,
+    scale3,
+    color,
+    ros::Duration(),
+    false,
+    points,
+    colors,
+    "",
+    "",
+    false
+  );
+}
+
+visualization_msgs::Marker makeMarkerSPHERETemplate(
+    double scale, std::string color_name, std::string frame_id)
+{
+  if (scale <= 0) scale = 1.0;
+  std::vector<geometry_msgs::Point> points;
+  std::vector<std_msgs::ColorRGBA> colors;
+  geometry_msgs::Pose pose;
+  pose.orientation.w = 1;
+  geometry_msgs::Vector3 scale3;
+  scale3.x = scale3.y = scale3.z = 0.1;
+  scale3.x*=scale;
+  scale3.y*=scale;
+  scale3.z*=scale;
+  std_msgs::ColorRGBA color = color_names::makeColorMsg(color_name);
+
+  return makeMarkerTemplate
+ (
+    frame_id,
+    "",
+    0,
+    visualization_msgs::Marker::SPHERE,
+    visualization_msgs::Marker::ADD,
+    pose,
+    scale3,
+    color,
+    ros::Duration(),
+    false,
+    points,
+    colors,
+    "",
+    "",
+    false
+  );
+}
 //visualization_msgs::Marker makeMarkerCUBETemplate(std::string frame_id);
 //visualization_msgs::Marker makeMarkerSPHERETemplate(std::string frame_id);
 //visualization_msgs::Marker makeMarkerCYLINDERTemplate(std::string frame_id);
@@ -116,7 +192,5 @@ visualization_msgs::Marker makeMarkerARROWTemplate(double scale, std::string col
 //visualization_msgs::Marker makeMarkerTEXT_VIEW_FACINGTemplate(std::string frame_id);
 //visualization_msgs::Marker makeMarkerMESH_RESOURCETemplate(std::string frame_id);
 //visualization_msgs::Marker makeMarkerTRIANGLE_LISTTemplate(std::string frame_id);
-
-
 
 } // namespace easy_marker
