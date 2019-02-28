@@ -5,16 +5,26 @@
 #include <ros/ros.h>
 #include "easy_marker/easy_marker.h"
 #include <visualization_msgs/MarkerArray.h>
+using namespace std;
 using namespace easy_marker;
 using namespace visualization_msgs;
 
 int main(int argc, char** argv)
 {
   ros::init(argc, argv, "easy_marker_node");
-  std::vector<visualization_msgs::Marker> markers;
+  vector<Marker> markers;
   markers.push_back(makeMarkerARROWTemplate());
   markers.push_back(makeMarkerCUBETemplate());
   markers.push_back(makeMarkerSPHERETemplate());
+  vector<geometry_msgs::Point> points;
+  for (int i = 0; i < 3; i++)
+  {
+    geometry_msgs::Point p;
+    p.y = i*0.1;
+    points.push_back(p);
+  }
+  vector<string> color_names = {"red", "green", "blue"};
+  markers.push_back(makeMarkerPOINTSTemplate(points, color_names));
 
   for (int i = 0; i < markers.size(); i++)
   {
@@ -27,7 +37,6 @@ int main(int argc, char** argv)
   //markers[ 5] = makeMarkerLINE_LISTTemplate();
   //markers[ 6] = makeMarkerCUBE_LISTTemplate();
   //markers[ 7] = makeMarkerSPHERE_LISTTemplate();
-  //markers[ 8] = makeMarkerPOINTSTemplate();
   //markers[ 9] = makeMarkerTEXT_VIEW_FACINGTemplate();
   //markers[10] = makeMarkerMESH_RESOURCETemplate();
   //markers[11] = makeMarkerTRIANGLE_LISTTemplate();

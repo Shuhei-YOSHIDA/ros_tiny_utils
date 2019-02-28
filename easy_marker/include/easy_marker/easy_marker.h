@@ -23,7 +23,10 @@ visualization_msgs::Marker makeMarkerSPHERETemplate(
 //visualization_msgs::Marker makeMarkerLINE_LISTTemplate(std::string frame_id="base_link");
 //visualization_msgs::Marker makeMarkerCUBE_LISTTemplate(std::string frame_id="base_link");
 //visualization_msgs::Marker makeMarkerSPHERE_LISTTemplate(std::string frame_id="base_link");
-//visualization_msgs::Marker makeMarkerPOINTSTemplate(std::string frame_id="base_link");
+visualization_msgs::Marker makeMarkerPOINTSTemplate(
+    std::vector<geometry_msgs::Point> points={},
+    std::vector<std::string> color_names={},
+    double scale=1.0, std::string frame_id="base_link");
 //visualization_msgs::Marker makeMarkerTEXT_VIEW_FACINGTemplate(std::string frame_id="base_link");
 //visualization_msgs::Marker makeMarkerMESH_RESOURCETemplate(std::string frame_id="base_link");
 //visualization_msgs::Marker makeMarkerTRIANGLE_LISTTemplate(std::string frame_id="base_link");
@@ -189,6 +192,40 @@ visualization_msgs::Marker makeMarkerSPHERETemplate(
 //visualization_msgs::Marker makeMarkerCUBE_LISTTemplate(std::string frame_id);
 //visualization_msgs::Marker makeMarkerSPHERE_LISTTemplate(std::string frame_id);
 //visualization_msgs::Marker makeMarkerPOINTSTemplate(std::string frame_id);
+visualization_msgs::Marker makeMarkerPOINTSTemplate(
+    std::vector<geometry_msgs::Point> points,
+    std::vector<std::string> color_names, double scale, std::string frame_id)
+{
+  std::vector<std_msgs::ColorRGBA> colors;
+  for (auto&& c_name : color_names) colors.push_back(color_names::makeColorMsg(c_name));
+  geometry_msgs::Pose pose;
+  pose.orientation.w = 1;
+  geometry_msgs::Vector3 scale3;
+  scale3.x = scale3.y = scale3.z = 0.1;
+  scale3.x*=scale;
+  scale3.y*=scale;
+  scale3.z*=scale;
+  std_msgs::ColorRGBA color;
+
+  return makeMarkerTemplate
+ (
+    frame_id,
+    "",
+    0,
+    visualization_msgs::Marker::POINTS,
+    visualization_msgs::Marker::ADD,
+    pose,
+    scale3,
+    color,
+    ros::Duration(),
+    false,
+    points,
+    colors,
+    "",
+    "",
+    false
+  );
+}
 //visualization_msgs::Marker makeMarkerTEXT_VIEW_FACINGTemplate(std::string frame_id);
 //visualization_msgs::Marker makeMarkerMESH_RESOURCETemplate(std::string frame_id);
 //visualization_msgs::Marker makeMarkerTRIANGLE_LISTTemplate(std::string frame_id);
