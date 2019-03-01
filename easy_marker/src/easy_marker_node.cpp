@@ -18,6 +18,7 @@ int main(int argc, char** argv)
   {
     geometry_msgs::Point p;
     p.y = i*0.1;
+    p.z = (i%2==1 ? 0.1 : 0);
     points.push_back(p);
   }
   vector<string> color_names = {"red", "green", "blue", "yellow", "purple", "gray"};
@@ -33,8 +34,6 @@ int main(int argc, char** argv)
   markers.push_back(makeMarkerPOINTSTemplate(points, color_names));
   markers.push_back(makeMarkerTEXT_VIEW_FACINGTemplate("This is test marker"));
   markers.push_back(makeMarkerMESH_RESOURCETemplate());
-  points[1].z = 0.1;
-  points[4].z = 0.1;
   markers.push_back(makeMarkerTRIANGLE_LISTTemplate(points, color_names));
 
   for (int i = 0; i < markers.size(); i++)
