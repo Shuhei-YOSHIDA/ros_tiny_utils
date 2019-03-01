@@ -44,7 +44,7 @@ visualization_msgs::Marker makeMarkerTEXT_VIEW_FACINGTemplate(
     std::string text="",
     double scale=1.0, std::string color_name="red", std::string frame_id="base_link");
 visualization_msgs::Marker makeMarkerMESH_RESOURCETemplate(
-    std::string mesh_resource="", bool mesh_use_embedded_materials=true,
+    std::string mesh_resource="package://easy_marker/meshes/xyz_marker.stl", bool mesh_use_embedded_materials=true,
     double scale=1.0, std::string color_name="red", std::string frame_id="base_link");
 visualization_msgs::Marker makeMarkerTRIANGLE_LISTTemplate(
     std::vector<geometry_msgs::Point> points={},
