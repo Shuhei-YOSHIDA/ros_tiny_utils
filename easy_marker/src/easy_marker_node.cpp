@@ -13,33 +13,35 @@ int main(int argc, char** argv)
 {
   ros::init(argc, argv, "easy_marker_node");
   vector<Marker> markers;
-  markers.push_back(makeMarkerARROWTemplate());
-  markers.push_back(makeMarkerCUBETemplate());
-  markers.push_back(makeMarkerSPHERETemplate());
   vector<geometry_msgs::Point> points;
-  for (int i = 0; i < 3; i++)
+  for (int i = 0; i < 6; i++)
   {
     geometry_msgs::Point p;
     p.y = i*0.1;
     points.push_back(p);
   }
-  vector<string> color_names = {"red", "green", "blue"};
+  vector<string> color_names = {"red", "green", "blue", "yellow", "purple", "gray"};
+
+  markers.push_back(makeMarkerARROWTemplate());
+  markers.push_back(makeMarkerCUBETemplate());
+  markers.push_back(makeMarkerSPHERETemplate());
+  markers.push_back(makeMarkerCYLINDERTemplate());
+  markers.push_back(makeMarkerLINE_STRIPTemplate(points, color_names, 0.1));
+  markers.push_back(makeMarkerLINE_LISTTemplate(points, color_names, 0.1));
+  markers.push_back(makeMarkerCUBE_LISTTemplate(points, color_names));
+  markers.push_back(makeMarkerSPHERE_LISTTemplate(points, color_names));
   markers.push_back(makeMarkerPOINTSTemplate(points, color_names));
+  markers.push_back(makeMarkerTEXT_VIEW_FACINGTemplate("This is test marker"));
+  markers.push_back(makeMarkerMESH_RESOURCETemplate());
+  points[1].z = 0.1;
+  points[4].z = 0.1;
+  markers.push_back(makeMarkerTRIANGLE_LISTTemplate(points, color_names));
 
   for (int i = 0; i < markers.size(); i++)
   {
     markers[i].pose.position.x = 0.2*i;
     markers[i].id = i;
   }
-
-  //markers[ 3] = makeMarkerCYLINDERTemplate();
-  //markers[ 4] = makeMarkerLINE_STRIPTemplate();
-  //markers[ 5] = makeMarkerLINE_LISTTemplate();
-  //markers[ 6] = makeMarkerCUBE_LISTTemplate();
-  //markers[ 7] = makeMarkerSPHERE_LISTTemplate();
-  //markers[ 9] = makeMarkerTEXT_VIEW_FACINGTemplate();
-  //markers[10] = makeMarkerMESH_RESOURCETemplate();
-  //markers[11] = makeMarkerTRIANGLE_LISTTemplate();
 
   ros::NodeHandle nh;
   ros::Rate loop(1);
