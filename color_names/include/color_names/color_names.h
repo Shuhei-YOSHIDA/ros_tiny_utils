@@ -3,12 +3,14 @@
  * @brief Preset Color names
  */
 
-#pragma once
+#ifndef COLOR_NAMES_COLOR_NAMES_H
+#define COLOR_NAMES_COLOR_NAMES_H
+
 #include <std_msgs/ColorRGBA.h>
 
 namespace color_names
 {
-std_msgs::ColorRGBA makeColorMsg(std::string preset_name, double alpha=1.0);
+inline std_msgs::ColorRGBA makeColorMsg(std::string preset_name, double alpha=1.0);
 
 ///@todo Read data from text data?
 const std::map<std::string, std::array<float, 3>> COLOR_NAME_DICT
@@ -182,3 +184,5 @@ std_msgs::ColorRGBA makeColorMsg(std::string preset_name, double alpha)
 }
 
 } // namespace color_names
+
+#endif

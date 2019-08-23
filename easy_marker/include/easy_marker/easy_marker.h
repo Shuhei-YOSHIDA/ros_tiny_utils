@@ -2,68 +2,70 @@
  * @file easy_marker.h
  */
 
-#pragma once
+#ifndef EASY_MARKER_EASY_MARKER_H
+#define EASY_MARKER_EASY_MARKER_H
+
 #include <visualization_msgs/Marker.h>
 #include "color_names/color_names.h"
 
 namespace easy_marker
 {
 /// Make template by visualization_msgs::Marker's enum for markers' type
-visualization_msgs::Marker makeMarkerTemplate(int preset_type);
+inline visualization_msgs::Marker makeMarkerTemplate(int preset_type);
 
 /// Make template of visualization_msgs::Marker::ARROW
-visualization_msgs::Marker makeMarkerARROWTemplate(
+inline visualization_msgs::Marker makeMarkerARROWTemplate(
     double scale=1.0, std::string color_name="red", std::string frame_id="base_link");
 /// Make template of visualization_msgs::Marker::CUBE
-visualization_msgs::Marker makeMarkerCUBETemplate(
+inline visualization_msgs::Marker makeMarkerCUBETemplate(
     double scale=1.0, std::string color_name="red", std::string frame_id="base_link");
 /// Make template of visualization_msgs::Marker::SPHERE
-visualization_msgs::Marker makeMarkerSPHERETemplate(
+inline visualization_msgs::Marker makeMarkerSPHERETemplate(
     double scale=1.0, std::string color_name="red", std::string frame_id="base_link");
 /// Make template of visualization_msgs::Marker::CYLINDER
-visualization_msgs::Marker makeMarkerCYLINDERTemplate(
+inline visualization_msgs::Marker makeMarkerCYLINDERTemplate(
     double scale=1.0, std::string color_name="red", std::string frame_id="base_link");
 /// Make template of visualization_msgs::Marker::LINE_STRIP
-visualization_msgs::Marker makeMarkerLINE_STRIPTemplate(
+inline visualization_msgs::Marker makeMarkerLINE_STRIPTemplate(
     std::vector<geometry_msgs::Point> points={},
     std::vector<std::string> color_names={},
     double scale=1.0, std::string frame_id="base_link");
 /// Make template of visualization_msgs::Marker::LINE_LIST
-visualization_msgs::Marker makeMarkerLINE_LISTTemplate(
+inline visualization_msgs::Marker makeMarkerLINE_LISTTemplate(
     std::vector<geometry_msgs::Point> points={},
     std::vector<std::string> color_names={},
     double scale=1.0, std::string frame_id="base_link");
 /// Make template of visualization_msgs::Marker::CUBE_LIST
-visualization_msgs::Marker makeMarkerCUBE_LISTTemplate(
+inline visualization_msgs::Marker makeMarkerCUBE_LISTTemplate(
     std::vector<geometry_msgs::Point> points={},
     std::vector<std::string> color_names={},
     double scale=1.0, std::string frame_id="base_link");
 /// Make template of visualization_msgs::Marker::SPHERE_LIST
-visualization_msgs::Marker makeMarkerSPHERE_LISTTemplate(
+inline visualization_msgs::Marker makeMarkerSPHERE_LISTTemplate(
     std::vector<geometry_msgs::Point> points={},
     std::vector<std::string> color_names={},
     double scale=1.0, std::string frame_id="base_link");
 /// Make template of visualization_msgs::Marker::POINTS
-visualization_msgs::Marker makeMarkerPOINTSTemplate(
+inline visualization_msgs::Marker makeMarkerPOINTSTemplate(
     std::vector<geometry_msgs::Point> points={},
     std::vector<std::string> color_names={},
     double scale=1.0, std::string frame_id="base_link");
 /// Make template of visualization_msgs::Marker::TEXT_VIEW_FACING
-visualization_msgs::Marker makeMarkerTEXT_VIEW_FACINGTemplate(
+inline visualization_msgs::Marker makeMarkerTEXT_VIEW_FACINGTemplate(
     std::string text="",
     double scale=1.0, std::string color_name="red", std::string frame_id="base_link");
 /// Make template of visualization_msgs::Marker::MESH_RESOURCE
-visualization_msgs::Marker makeMarkerMESH_RESOURCETemplate(
+inline visualization_msgs::Marker makeMarkerMESH_RESOURCETemplate(
     std::string mesh_resource="package://easy_marker/meshes/xyz_marker.stl", bool mesh_use_embedded_materials=true,
     double scale=1.0, std::string color_name="red", std::string frame_id="base_link");
 /// Make template of visualization_msgs::Marker::TRIANGLE_LIST
-visualization_msgs::Marker makeMarkerTRIANGLE_LISTTemplate(
+inline visualization_msgs::Marker makeMarkerTRIANGLE_LISTTemplate(
     std::vector<geometry_msgs::Point> points={},
     std::vector<std::string> color_names={},
     double scale=1.0, std::string frame_id="base_link");
 
 /// Template for sibstutiting
-visualization_msgs::Marker makeMarkerTemplate
+inline visualization_msgs::Marker makeMarkerTemplate
  (
     std::string frame_id,
     std::string ns,
@@ -566,3 +568,5 @@ visualization_msgs::Marker makeMarkerTRIANGLE_LISTTemplate(
 }
 
 } // namespace easy_marker
+
+#endif
