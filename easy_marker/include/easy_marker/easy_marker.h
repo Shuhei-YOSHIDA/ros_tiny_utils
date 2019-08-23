@@ -2,8 +2,8 @@
  * @file easy_marker.h
  */
 
-#ifndef EASY_MARKER_EASY_MARKER_H
-#define EASY_MARKER_EASY_MARKER_H
+#ifndef INCLUDE_EASY_MARKER_EASY_MARKER_H
+#define INCLUDE_EASY_MARKER_EASY_MARKER_H
 
 #include <visualization_msgs/Marker.h>
 #include "color_names/color_names.h"

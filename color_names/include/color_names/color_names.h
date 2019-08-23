@@ -3,8 +3,8 @@
  * @brief Preset Color names
  */
 
-#ifndef COLOR_NAMES_COLOR_NAMES_H
-#define COLOR_NAMES_COLOR_NAMES_H
+#ifndef INCLUDE_COLOR_NAMES_COLOR_NAMES_H
+#define INCLUDE_COLOR_NAMES_COLOR_NAMES_H
 
 #include <std_msgs/ColorRGBA.h>
 
