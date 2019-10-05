@@ -14,6 +14,7 @@ void jsCallback(const sensor_msgs::JointState::ConstPtr& msg)
 {
   int states_num = 7;
   double radius = 1.;
+  double lowest = -1.;
   tiny_rviz_plugins::MultiRobotStateDisplay mrsd_msg;
   mrsd_msg.header.stamp = ros::Time::now();
   mrsd_msg.header.frame_id = "world";
@@ -23,7 +24,9 @@ void jsCallback(const sensor_msgs::JointState::ConstPtr& msg)
     double theta = (2*M_PI/states_num)*(double)i;
     double x = radius*sin(theta);
     double y = radius*cos(theta);
-    double z = 0.;
+    double z = lowest;
+    radius *= 0.9;
+    lowest *= 0.8;
 
     geometry_msgs::TransformStamped trans;
     trans.header.stamp = ros::Time::now();
@@ -40,6 +43,7 @@ void jsCallback(const sensor_msgs::JointState::ConstPtr& msg)
       js_msg.position[j] *= (double)i/states_num;
     }
 
+    /// @note The number of size of transforms_to_root and joint_states should be same
     mrsd_msg.transforms_to_root.push_back(trans);
     mrsd_msg.joint_states.push_back(js_msg);
   }
@@ -62,7 +66,8 @@ int main(int argc, char** argv)
   static_trans.transform.rotation.w = 1;
   static_broadcaster.sendTransform(static_trans);
 
-  mrsd_pub = nh.advertise<tiny_rviz_plugins::MultiRobotStateDisplay>("multirobotstatedisplay", 1);
+  const std::string topic_name = "multi_robot_state"; /// @todo Currently, this name can only be used.
+  mrsd_pub = nh.advertise<tiny_rviz_plugins::MultiRobotStateDisplay>(topic_name, 1);
   auto js_sub = nh.subscribe("joint_states", 1, jsCallback);
 
   ros::spin();

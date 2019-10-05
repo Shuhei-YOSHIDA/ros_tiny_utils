@@ -1,9 +1,9 @@
 /**
  * @file multi_robot_state_process.cpp
+ * @detail This code is based on a part of https://github.com/ros/robot_state_publisher
  */
 
 #include "multi_robot_state_process.h"
-//using namespace multi_robot_state_publisher;
 using namespace tiny_rviz_plugins;
 using namespace std;
 using namespace ros;
@@ -35,8 +35,9 @@ MultiRobotStatePublisher::MultiRobotStatePublisher(const KDL::Tree& tree, const 
   ros::TransportHints transport_hints;
   transport_hints.tcpNoDelay(true);
 
-  // subscribe to publish MRMD message
-  mrmd_sub_ = n.subscribe("multi_robot_state", 1,
+  // subscribe to MultiRobotStateDisplay message
+  std::string topic_name = "multi_robot_state"; ///@todo This name can only be used at current codes
+  mrmd_sub_ = n.subscribe(topic_name, 1,
                           &MultiRobotStatePublisher::callbackMRS, this, transport_hints);
 
   // trigger to publish fixed joints
@@ -64,8 +65,6 @@ void MultiRobotStatePublisher::callbackFixedJoint(const ros::TimerEvent& e)
   {
     state_publisher_.publishFixedTransforms(tf_prefix_+"/"+to_string(i), use_tf_static_);
   }
-  //cout <<"testtest" << endl;
-  //ROS_INFO("TESTTEST");
 }
 
 void MultiRobotStatePublisher::callbackMRS(const MultiRobotStateDisplayConstPtr& state)
@@ -75,8 +74,6 @@ void MultiRobotStatePublisher::callbackMRS(const MultiRobotStateDisplayConstPtr&
 
 void MultiRobotStatePublisher::readMRSAndBroadcast(const MultiRobotStateDisplayConstPtr& state)
 {
-  cout <<"testtesttttt" << endl; //速度的に飛んでしまっている？
-  ROS_INFO("TESTTESTTTTT");
   if (state->joint_states.size() != state->transforms_to_root.size())
   {
     ROS_ERROR("Multi Robot state publisher ignored an invalid MultiRobotModelDisplay message");
@@ -104,7 +101,6 @@ void MultiRobotStatePublisher::readMRSAndBroadcast(const MultiRobotStateDisplayC
 
   robot_num_ = state->joint_states.size();
 
-  // msgのロボット数変更された場合
   if (state->joint_states.size() != last_publish_times_.size())
   {
     last_publish_times_.clear();
@@ -122,10 +118,8 @@ void MultiRobotStatePublisher::readMRSAndBroadcast(const MultiRobotStateDisplayC
     last_publish_times_.resize(state->joint_states.size());
   }
 
-  // すべてのロボットに対して実行
   for (int robo_num = 0; robo_num < state->joint_states.size(); robo_num++)
   {
-    // jointstateからロボットのリンクのtfを生成
     sensor_msgs::JointState js = state->joint_states[robo_num];
     geometry_msgs::TransformStamped tf = state->transforms_to_root[robo_num];
 
@@ -141,7 +135,6 @@ void MultiRobotStatePublisher::readMRSAndBroadcast(const MultiRobotStateDisplayC
     ros::Time last_published = now;
     for (unsigned int i = 0; i < js.name.size(); i++)
     {
-      //ros::Time t = last_publish_time_[state->name[i]];
       ros::Time t = last_publish_times_[robo_num][js.name[i]];
       last_published = (t < last_published) ? t : last_published;
     }
@@ -178,15 +171,10 @@ void MultiRobotStatePublisher::readMRSAndBroadcast(const MultiRobotStateDisplayC
         last_publish_times_[robo_num][js.name[i]] = state->header.stamp;
       }
 
-      // ついでにmsg のtransformsの世界系から各ロボットへのtfを吐き出す
+      // broadcast each tf of all states
       geometry_msgs::TransformStamped tfs = tf;
       tfs.header.stamp = state->header.stamp;
       br_.sendTransform(tfs);
-      ROS_INFO("published");
     }
   }
 }
-
-
-
-

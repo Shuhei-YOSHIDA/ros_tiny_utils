@@ -1,7 +1,7 @@
 /**
  * @file multi_robot_state_display.h
  * @brief RViz Plugin to take successive photo for multi-robot state
- * @detail This code is based on a part of https://github.com/ros/robot_state_publisher
+ * @detail This code is based on a part of https://github.com/ros-visualization/rviz/
  */
 #ifndef TINY_RVIZ_PLUGINS_MULTI_ROBOT_STATE_DISPLAY_H
 #define TINY_RVIZ_PLUGINS_MULTI_ROBOT_STATE_DISPLAY_H

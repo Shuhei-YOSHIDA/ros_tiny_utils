@@ -1,6 +1,6 @@
 /**
  * @file multi_robot_state_display.cpp
- * @detail This code is based on a part of https://github.com/ros/robot_state_publisher
+ * @detail This code is based on a part of https://github.com/ros-visualization/rviz/
  */
 #include <OgreSceneNode.h>
 #include <OgreSceneManager.h>

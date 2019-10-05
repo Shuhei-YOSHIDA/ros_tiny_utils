@@ -6,8 +6,9 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /MultiRobotStateDisplay1/Status1
       Splitter Ratio: 0.5
-    Tree Height: 565
+    Tree Height: 775
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -449,182 +450,2240 @@ Visualization Manager:
       Enabled: true
       Frame Timeout: 15
       Frames:
-        All Enabled: true
+        0/CameraBottom_frame:
+          Value: false
+        0/CameraBottom_optical_frame:
+          Value: false
+        0/CameraTop_frame:
+          Value: false
+        0/CameraTop_optical_frame:
+          Value: false
+        0/ChestButton_frame:
+          Value: false
+        0/Head:
+          Value: false
+        0/HeadTouchFront_frame:
+          Value: false
+        0/HeadTouchMiddle_frame:
+          Value: false
+        0/HeadTouchRear_frame:
+          Value: false
+        0/ImuTorsoAccelerometer_frame:
+          Value: false
+        0/ImuTorsoGyrometer_frame:
+          Value: false
+        0/LAnklePitch:
+          Value: false
+        0/LBicep:
+          Value: false
+        0/LElbow:
+          Value: false
+        0/LFinger11_link:
+          Value: false
+        0/LFinger12_link:
+          Value: false
+        0/LFinger13_link:
+          Value: false
+        0/LFinger21_link:
+          Value: false
+        0/LFinger22_link:
+          Value: false
+        0/LFinger23_link:
+          Value: false
+        0/LFootBumperLeft_frame:
+          Value: false
+        0/LFootBumperRight_frame:
+          Value: false
+        0/LForeArm:
+          Value: false
+        0/LFsrFL_frame:
+          Value: false
+        0/LFsrFR_frame:
+          Value: false
+        0/LFsrRL_frame:
+          Value: false
+        0/LFsrRR_frame:
+          Value: false
+        0/LHandTouchBack_frame:
+          Value: false
+        0/LHandTouchLeft_frame:
+          Value: false
+        0/LHandTouchRight_frame:
+          Value: false
+        0/LHip:
+          Value: false
+        0/LInfraRed_frame:
+          Value: false
+        0/LPelvis:
+          Value: false
+        0/LShoulder:
+          Value: false
+        0/LSonar_frame:
+          Value: false
+        0/LThigh:
+          Value: false
+        0/LThumb1_link:
+          Value: false
+        0/LThumb2_link:
+          Value: false
+        0/LTibia:
+          Value: false
+        0/MicroFrontCenter_frame:
+          Value: false
+        0/MicroRearCenter_frame:
+          Value: false
+        0/MicroSurroundLeft_frame:
+          Value: false
+        0/MicroSurroundRight_frame:
+          Value: false
+        0/Neck:
+          Value: false
+        0/RAnklePitch:
+          Value: false
+        0/RBicep:
+          Value: false
+        0/RElbow:
+          Value: false
+        0/RFinger11_link:
+          Value: false
+        0/RFinger12_link:
+          Value: false
+        0/RFinger13_link:
+          Value: false
+        0/RFinger21_link:
+          Value: false
+        0/RFinger22_link:
+          Value: false
+        0/RFinger23_link:
+          Value: false
+        0/RFootBumperLeft_frame:
+          Value: false
+        0/RFootBumperRight_frame:
+          Value: false
+        0/RForeArm:
+          Value: false
+        0/RFsrFL_frame:
+          Value: false
+        0/RFsrFR_frame:
+          Value: false
+        0/RFsrRL_frame:
+          Value: false
+        0/RFsrRR_frame:
+          Value: false
+        0/RHandTouchBack_frame:
+          Value: false
+        0/RHandTouchLeft_frame:
+          Value: false
+        0/RHandTouchRight_frame:
+          Value: false
+        0/RHip:
+          Value: false
+        0/RInfraRed_frame:
+          Value: false
+        0/RPelvis:
+          Value: false
+        0/RShoulder:
+          Value: false
+        0/RSonar_frame:
+          Value: false
+        0/RThigh:
+          Value: false
+        0/RThumb1_link:
+          Value: false
+        0/RThumb2_link:
+          Value: false
+        0/RTibia:
+          Value: false
+        0/base_link:
+          Value: true
+        0/gaze:
+          Value: false
+        0/l_ankle:
+          Value: false
+        0/l_gripper:
+          Value: false
+        0/l_sole:
+          Value: false
+        0/l_wrist:
+          Value: false
+        0/r_ankle:
+          Value: false
+        0/r_gripper:
+          Value: false
+        0/r_sole:
+          Value: false
+        0/r_wrist:
+          Value: false
+        0/torso:
+          Value: false
+        1/CameraBottom_frame:
+          Value: false
+        1/CameraBottom_optical_frame:
+          Value: false
+        1/CameraTop_frame:
+          Value: false
+        1/CameraTop_optical_frame:
+          Value: false
+        1/ChestButton_frame:
+          Value: false
+        1/Head:
+          Value: false
+        1/HeadTouchFront_frame:
+          Value: false
+        1/HeadTouchMiddle_frame:
+          Value: false
+        1/HeadTouchRear_frame:
+          Value: false
+        1/ImuTorsoAccelerometer_frame:
+          Value: false
+        1/ImuTorsoGyrometer_frame:
+          Value: false
+        1/LAnklePitch:
+          Value: false
+        1/LBicep:
+          Value: false
+        1/LElbow:
+          Value: false
+        1/LFinger11_link:
+          Value: false
+        1/LFinger12_link:
+          Value: false
+        1/LFinger13_link:
+          Value: false
+        1/LFinger21_link:
+          Value: false
+        1/LFinger22_link:
+          Value: false
+        1/LFinger23_link:
+          Value: false
+        1/LFootBumperLeft_frame:
+          Value: false
+        1/LFootBumperRight_frame:
+          Value: false
+        1/LForeArm:
+          Value: false
+        1/LFsrFL_frame:
+          Value: false
+        1/LFsrFR_frame:
+          Value: false
+        1/LFsrRL_frame:
+          Value: false
+        1/LFsrRR_frame:
+          Value: false
+        1/LHandTouchBack_frame:
+          Value: false
+        1/LHandTouchLeft_frame:
+          Value: false
+        1/LHandTouchRight_frame:
+          Value: false
+        1/LHip:
+          Value: false
+        1/LInfraRed_frame:
+          Value: false
+        1/LPelvis:
+          Value: false
+        1/LShoulder:
+          Value: false
+        1/LSonar_frame:
+          Value: false
+        1/LThigh:
+          Value: false
+        1/LThumb1_link:
+          Value: false
+        1/LThumb2_link:
+          Value: false
+        1/LTibia:
+          Value: false
+        1/MicroFrontCenter_frame:
+          Value: false
+        1/MicroRearCenter_frame:
+          Value: false
+        1/MicroSurroundLeft_frame:
+          Value: false
+        1/MicroSurroundRight_frame:
+          Value: false
+        1/Neck:
+          Value: false
+        1/RAnklePitch:
+          Value: false
+        1/RBicep:
+          Value: false
+        1/RElbow:
+          Value: false
+        1/RFinger11_link:
+          Value: false
+        1/RFinger12_link:
+          Value: false
+        1/RFinger13_link:
+          Value: false
+        1/RFinger21_link:
+          Value: false
+        1/RFinger22_link:
+          Value: false
+        1/RFinger23_link:
+          Value: false
+        1/RFootBumperLeft_frame:
+          Value: false
+        1/RFootBumperRight_frame:
+          Value: false
+        1/RForeArm:
+          Value: false
+        1/RFsrFL_frame:
+          Value: false
+        1/RFsrFR_frame:
+          Value: false
+        1/RFsrRL_frame:
+          Value: false
+        1/RFsrRR_frame:
+          Value: false
+        1/RHandTouchBack_frame:
+          Value: false
+        1/RHandTouchLeft_frame:
+          Value: false
+        1/RHandTouchRight_frame:
+          Value: false
+        1/RHip:
+          Value: false
+        1/RInfraRed_frame:
+          Value: false
+        1/RPelvis:
+          Value: false
+        1/RShoulder:
+          Value: false
+        1/RSonar_frame:
+          Value: false
+        1/RThigh:
+          Value: false
+        1/RThumb1_link:
+          Value: false
+        1/RThumb2_link:
+          Value: false
+        1/RTibia:
+          Value: false
+        1/base_link:
+          Value: true
+        1/gaze:
+          Value: false
+        1/l_ankle:
+          Value: false
+        1/l_gripper:
+          Value: false
+        1/l_sole:
+          Value: false
+        1/l_wrist:
+          Value: false
+        1/r_ankle:
+          Value: false
+        1/r_gripper:
+          Value: false
+        1/r_sole:
+          Value: false
+        1/r_wrist:
+          Value: false
+        1/torso:
+          Value: false
+        2/CameraBottom_frame:
+          Value: false
+        2/CameraBottom_optical_frame:
+          Value: false
+        2/CameraTop_frame:
+          Value: false
+        2/CameraTop_optical_frame:
+          Value: false
+        2/ChestButton_frame:
+          Value: false
+        2/Head:
+          Value: false
+        2/HeadTouchFront_frame:
+          Value: false
+        2/HeadTouchMiddle_frame:
+          Value: false
+        2/HeadTouchRear_frame:
+          Value: false
+        2/ImuTorsoAccelerometer_frame:
+          Value: false
+        2/ImuTorsoGyrometer_frame:
+          Value: false
+        2/LAnklePitch:
+          Value: false
+        2/LBicep:
+          Value: false
+        2/LElbow:
+          Value: false
+        2/LFinger11_link:
+          Value: false
+        2/LFinger12_link:
+          Value: false
+        2/LFinger13_link:
+          Value: false
+        2/LFinger21_link:
+          Value: false
+        2/LFinger22_link:
+          Value: false
+        2/LFinger23_link:
+          Value: false
+        2/LFootBumperLeft_frame:
+          Value: false
+        2/LFootBumperRight_frame:
+          Value: false
+        2/LForeArm:
+          Value: false
+        2/LFsrFL_frame:
+          Value: false
+        2/LFsrFR_frame:
+          Value: false
+        2/LFsrRL_frame:
+          Value: false
+        2/LFsrRR_frame:
+          Value: false
+        2/LHandTouchBack_frame:
+          Value: false
+        2/LHandTouchLeft_frame:
+          Value: false
+        2/LHandTouchRight_frame:
+          Value: false
+        2/LHip:
+          Value: false
+        2/LInfraRed_frame:
+          Value: false
+        2/LPelvis:
+          Value: false
+        2/LShoulder:
+          Value: false
+        2/LSonar_frame:
+          Value: false
+        2/LThigh:
+          Value: false
+        2/LThumb1_link:
+          Value: false
+        2/LThumb2_link:
+          Value: false
+        2/LTibia:
+          Value: false
+        2/MicroFrontCenter_frame:
+          Value: false
+        2/MicroRearCenter_frame:
+          Value: false
+        2/MicroSurroundLeft_frame:
+          Value: false
+        2/MicroSurroundRight_frame:
+          Value: false
+        2/Neck:
+          Value: false
+        2/RAnklePitch:
+          Value: false
+        2/RBicep:
+          Value: false
+        2/RElbow:
+          Value: false
+        2/RFinger11_link:
+          Value: false
+        2/RFinger12_link:
+          Value: false
+        2/RFinger13_link:
+          Value: false
+        2/RFinger21_link:
+          Value: false
+        2/RFinger22_link:
+          Value: false
+        2/RFinger23_link:
+          Value: false
+        2/RFootBumperLeft_frame:
+          Value: false
+        2/RFootBumperRight_frame:
+          Value: false
+        2/RForeArm:
+          Value: false
+        2/RFsrFL_frame:
+          Value: false
+        2/RFsrFR_frame:
+          Value: false
+        2/RFsrRL_frame:
+          Value: false
+        2/RFsrRR_frame:
+          Value: false
+        2/RHandTouchBack_frame:
+          Value: false
+        2/RHandTouchLeft_frame:
+          Value: false
+        2/RHandTouchRight_frame:
+          Value: false
+        2/RHip:
+          Value: false
+        2/RInfraRed_frame:
+          Value: false
+        2/RPelvis:
+          Value: false
+        2/RShoulder:
+          Value: false
+        2/RSonar_frame:
+          Value: false
+        2/RThigh:
+          Value: false
+        2/RThumb1_link:
+          Value: false
+        2/RThumb2_link:
+          Value: false
+        2/RTibia:
+          Value: false
+        2/base_link:
+          Value: true
+        2/gaze:
+          Value: false
+        2/l_ankle:
+          Value: false
+        2/l_gripper:
+          Value: false
+        2/l_sole:
+          Value: false
+        2/l_wrist:
+          Value: false
+        2/r_ankle:
+          Value: false
+        2/r_gripper:
+          Value: false
+        2/r_sole:
+          Value: false
+        2/r_wrist:
+          Value: false
+        2/torso:
+          Value: false
+        3/CameraBottom_frame:
+          Value: false
+        3/CameraBottom_optical_frame:
+          Value: false
+        3/CameraTop_frame:
+          Value: false
+        3/CameraTop_optical_frame:
+          Value: false
+        3/ChestButton_frame:
+          Value: false
+        3/Head:
+          Value: false
+        3/HeadTouchFront_frame:
+          Value: false
+        3/HeadTouchMiddle_frame:
+          Value: false
+        3/HeadTouchRear_frame:
+          Value: false
+        3/ImuTorsoAccelerometer_frame:
+          Value: false
+        3/ImuTorsoGyrometer_frame:
+          Value: false
+        3/LAnklePitch:
+          Value: false
+        3/LBicep:
+          Value: false
+        3/LElbow:
+          Value: false
+        3/LFinger11_link:
+          Value: false
+        3/LFinger12_link:
+          Value: false
+        3/LFinger13_link:
+          Value: false
+        3/LFinger21_link:
+          Value: false
+        3/LFinger22_link:
+          Value: false
+        3/LFinger23_link:
+          Value: false
+        3/LFootBumperLeft_frame:
+          Value: false
+        3/LFootBumperRight_frame:
+          Value: false
+        3/LForeArm:
+          Value: false
+        3/LFsrFL_frame:
+          Value: false
+        3/LFsrFR_frame:
+          Value: false
+        3/LFsrRL_frame:
+          Value: false
+        3/LFsrRR_frame:
+          Value: false
+        3/LHandTouchBack_frame:
+          Value: false
+        3/LHandTouchLeft_frame:
+          Value: false
+        3/LHandTouchRight_frame:
+          Value: false
+        3/LHip:
+          Value: false
+        3/LInfraRed_frame:
+          Value: false
+        3/LPelvis:
+          Value: false
+        3/LShoulder:
+          Value: false
+        3/LSonar_frame:
+          Value: false
+        3/LThigh:
+          Value: false
+        3/LThumb1_link:
+          Value: false
+        3/LThumb2_link:
+          Value: false
+        3/LTibia:
+          Value: false
+        3/MicroFrontCenter_frame:
+          Value: false
+        3/MicroRearCenter_frame:
+          Value: false
+        3/MicroSurroundLeft_frame:
+          Value: false
+        3/MicroSurroundRight_frame:
+          Value: false
+        3/Neck:
+          Value: false
+        3/RAnklePitch:
+          Value: false
+        3/RBicep:
+          Value: false
+        3/RElbow:
+          Value: false
+        3/RFinger11_link:
+          Value: false
+        3/RFinger12_link:
+          Value: false
+        3/RFinger13_link:
+          Value: false
+        3/RFinger21_link:
+          Value: false
+        3/RFinger22_link:
+          Value: false
+        3/RFinger23_link:
+          Value: false
+        3/RFootBumperLeft_frame:
+          Value: false
+        3/RFootBumperRight_frame:
+          Value: false
+        3/RForeArm:
+          Value: false
+        3/RFsrFL_frame:
+          Value: false
+        3/RFsrFR_frame:
+          Value: false
+        3/RFsrRL_frame:
+          Value: false
+        3/RFsrRR_frame:
+          Value: false
+        3/RHandTouchBack_frame:
+          Value: false
+        3/RHandTouchLeft_frame:
+          Value: false
+        3/RHandTouchRight_frame:
+          Value: false
+        3/RHip:
+          Value: false
+        3/RInfraRed_frame:
+          Value: false
+        3/RPelvis:
+          Value: false
+        3/RShoulder:
+          Value: false
+        3/RSonar_frame:
+          Value: false
+        3/RThigh:
+          Value: false
+        3/RThumb1_link:
+          Value: false
+        3/RThumb2_link:
+          Value: false
+        3/RTibia:
+          Value: false
+        3/base_link:
+          Value: true
+        3/gaze:
+          Value: false
+        3/l_ankle:
+          Value: false
+        3/l_gripper:
+          Value: false
+        3/l_sole:
+          Value: false
+        3/l_wrist:
+          Value: false
+        3/r_ankle:
+          Value: false
+        3/r_gripper:
+          Value: false
+        3/r_sole:
+          Value: false
+        3/r_wrist:
+          Value: false
+        3/torso:
+          Value: false
+        4/CameraBottom_frame:
+          Value: false
+        4/CameraBottom_optical_frame:
+          Value: false
+        4/CameraTop_frame:
+          Value: false
+        4/CameraTop_optical_frame:
+          Value: false
+        4/ChestButton_frame:
+          Value: false
+        4/Head:
+          Value: false
+        4/HeadTouchFront_frame:
+          Value: false
+        4/HeadTouchMiddle_frame:
+          Value: false
+        4/HeadTouchRear_frame:
+          Value: false
+        4/ImuTorsoAccelerometer_frame:
+          Value: false
+        4/ImuTorsoGyrometer_frame:
+          Value: false
+        4/LAnklePitch:
+          Value: false
+        4/LBicep:
+          Value: false
+        4/LElbow:
+          Value: false
+        4/LFinger11_link:
+          Value: false
+        4/LFinger12_link:
+          Value: false
+        4/LFinger13_link:
+          Value: false
+        4/LFinger21_link:
+          Value: false
+        4/LFinger22_link:
+          Value: false
+        4/LFinger23_link:
+          Value: false
+        4/LFootBumperLeft_frame:
+          Value: false
+        4/LFootBumperRight_frame:
+          Value: false
+        4/LForeArm:
+          Value: false
+        4/LFsrFL_frame:
+          Value: false
+        4/LFsrFR_frame:
+          Value: false
+        4/LFsrRL_frame:
+          Value: false
+        4/LFsrRR_frame:
+          Value: false
+        4/LHandTouchBack_frame:
+          Value: false
+        4/LHandTouchLeft_frame:
+          Value: false
+        4/LHandTouchRight_frame:
+          Value: false
+        4/LHip:
+          Value: false
+        4/LInfraRed_frame:
+          Value: false
+        4/LPelvis:
+          Value: false
+        4/LShoulder:
+          Value: false
+        4/LSonar_frame:
+          Value: false
+        4/LThigh:
+          Value: false
+        4/LThumb1_link:
+          Value: false
+        4/LThumb2_link:
+          Value: false
+        4/LTibia:
+          Value: false
+        4/MicroFrontCenter_frame:
+          Value: false
+        4/MicroRearCenter_frame:
+          Value: false
+        4/MicroSurroundLeft_frame:
+          Value: false
+        4/MicroSurroundRight_frame:
+          Value: false
+        4/Neck:
+          Value: false
+        4/RAnklePitch:
+          Value: false
+        4/RBicep:
+          Value: false
+        4/RElbow:
+          Value: false
+        4/RFinger11_link:
+          Value: false
+        4/RFinger12_link:
+          Value: false
+        4/RFinger13_link:
+          Value: false
+        4/RFinger21_link:
+          Value: false
+        4/RFinger22_link:
+          Value: false
+        4/RFinger23_link:
+          Value: false
+        4/RFootBumperLeft_frame:
+          Value: false
+        4/RFootBumperRight_frame:
+          Value: false
+        4/RForeArm:
+          Value: false
+        4/RFsrFL_frame:
+          Value: false
+        4/RFsrFR_frame:
+          Value: false
+        4/RFsrRL_frame:
+          Value: false
+        4/RFsrRR_frame:
+          Value: false
+        4/RHandTouchBack_frame:
+          Value: false
+        4/RHandTouchLeft_frame:
+          Value: false
+        4/RHandTouchRight_frame:
+          Value: false
+        4/RHip:
+          Value: false
+        4/RInfraRed_frame:
+          Value: false
+        4/RPelvis:
+          Value: false
+        4/RShoulder:
+          Value: false
+        4/RSonar_frame:
+          Value: false
+        4/RThigh:
+          Value: false
+        4/RThumb1_link:
+          Value: false
+        4/RThumb2_link:
+          Value: false
+        4/RTibia:
+          Value: false
+        4/base_link:
+          Value: true
+        4/gaze:
+          Value: false
+        4/l_ankle:
+          Value: false
+        4/l_gripper:
+          Value: false
+        4/l_sole:
+          Value: false
+        4/l_wrist:
+          Value: false
+        4/r_ankle:
+          Value: false
+        4/r_gripper:
+          Value: false
+        4/r_sole:
+          Value: false
+        4/r_wrist:
+          Value: false
+        4/torso:
+          Value: false
+        5/CameraBottom_frame:
+          Value: false
+        5/CameraBottom_optical_frame:
+          Value: false
+        5/CameraTop_frame:
+          Value: false
+        5/CameraTop_optical_frame:
+          Value: false
+        5/ChestButton_frame:
+          Value: false
+        5/Head:
+          Value: false
+        5/HeadTouchFront_frame:
+          Value: false
+        5/HeadTouchMiddle_frame:
+          Value: false
+        5/HeadTouchRear_frame:
+          Value: false
+        5/ImuTorsoAccelerometer_frame:
+          Value: false
+        5/ImuTorsoGyrometer_frame:
+          Value: false
+        5/LAnklePitch:
+          Value: false
+        5/LBicep:
+          Value: false
+        5/LElbow:
+          Value: false
+        5/LFinger11_link:
+          Value: false
+        5/LFinger12_link:
+          Value: false
+        5/LFinger13_link:
+          Value: false
+        5/LFinger21_link:
+          Value: false
+        5/LFinger22_link:
+          Value: false
+        5/LFinger23_link:
+          Value: false
+        5/LFootBumperLeft_frame:
+          Value: false
+        5/LFootBumperRight_frame:
+          Value: false
+        5/LForeArm:
+          Value: false
+        5/LFsrFL_frame:
+          Value: false
+        5/LFsrFR_frame:
+          Value: false
+        5/LFsrRL_frame:
+          Value: false
+        5/LFsrRR_frame:
+          Value: false
+        5/LHandTouchBack_frame:
+          Value: false
+        5/LHandTouchLeft_frame:
+          Value: false
+        5/LHandTouchRight_frame:
+          Value: false
+        5/LHip:
+          Value: false
+        5/LInfraRed_frame:
+          Value: false
+        5/LPelvis:
+          Value: false
+        5/LShoulder:
+          Value: false
+        5/LSonar_frame:
+          Value: false
+        5/LThigh:
+          Value: false
+        5/LThumb1_link:
+          Value: false
+        5/LThumb2_link:
+          Value: false
+        5/LTibia:
+          Value: false
+        5/MicroFrontCenter_frame:
+          Value: false
+        5/MicroRearCenter_frame:
+          Value: false
+        5/MicroSurroundLeft_frame:
+          Value: false
+        5/MicroSurroundRight_frame:
+          Value: false
+        5/Neck:
+          Value: false
+        5/RAnklePitch:
+          Value: false
+        5/RBicep:
+          Value: false
+        5/RElbow:
+          Value: false
+        5/RFinger11_link:
+          Value: false
+        5/RFinger12_link:
+          Value: false
+        5/RFinger13_link:
+          Value: false
+        5/RFinger21_link:
+          Value: false
+        5/RFinger22_link:
+          Value: false
+        5/RFinger23_link:
+          Value: false
+        5/RFootBumperLeft_frame:
+          Value: false
+        5/RFootBumperRight_frame:
+          Value: false
+        5/RForeArm:
+          Value: false
+        5/RFsrFL_frame:
+          Value: false
+        5/RFsrFR_frame:
+          Value: false
+        5/RFsrRL_frame:
+          Value: false
+        5/RFsrRR_frame:
+          Value: false
+        5/RHandTouchBack_frame:
+          Value: false
+        5/RHandTouchLeft_frame:
+          Value: false
+        5/RHandTouchRight_frame:
+          Value: false
+        5/RHip:
+          Value: false
+        5/RInfraRed_frame:
+          Value: false
+        5/RPelvis:
+          Value: false
+        5/RShoulder:
+          Value: false
+        5/RSonar_frame:
+          Value: false
+        5/RThigh:
+          Value: false
+        5/RThumb1_link:
+          Value: false
+        5/RThumb2_link:
+          Value: false
+        5/RTibia:
+          Value: false
+        5/base_link:
+          Value: true
+        5/gaze:
+          Value: false
+        5/l_ankle:
+          Value: false
+        5/l_gripper:
+          Value: false
+        5/l_sole:
+          Value: false
+        5/l_wrist:
+          Value: false
+        5/r_ankle:
+          Value: false
+        5/r_gripper:
+          Value: false
+        5/r_sole:
+          Value: false
+        5/r_wrist:
+          Value: false
+        5/torso:
+          Value: false
+        6/CameraBottom_frame:
+          Value: false
+        6/CameraBottom_optical_frame:
+          Value: false
+        6/CameraTop_frame:
+          Value: false
+        6/CameraTop_optical_frame:
+          Value: false
+        6/ChestButton_frame:
+          Value: false
+        6/Head:
+          Value: false
+        6/HeadTouchFront_frame:
+          Value: false
+        6/HeadTouchMiddle_frame:
+          Value: false
+        6/HeadTouchRear_frame:
+          Value: false
+        6/ImuTorsoAccelerometer_frame:
+          Value: false
+        6/ImuTorsoGyrometer_frame:
+          Value: false
+        6/LAnklePitch:
+          Value: false
+        6/LBicep:
+          Value: false
+        6/LElbow:
+          Value: false
+        6/LFinger11_link:
+          Value: false
+        6/LFinger12_link:
+          Value: false
+        6/LFinger13_link:
+          Value: false
+        6/LFinger21_link:
+          Value: false
+        6/LFinger22_link:
+          Value: false
+        6/LFinger23_link:
+          Value: false
+        6/LFootBumperLeft_frame:
+          Value: false
+        6/LFootBumperRight_frame:
+          Value: false
+        6/LForeArm:
+          Value: false
+        6/LFsrFL_frame:
+          Value: false
+        6/LFsrFR_frame:
+          Value: false
+        6/LFsrRL_frame:
+          Value: false
+        6/LFsrRR_frame:
+          Value: false
+        6/LHandTouchBack_frame:
+          Value: false
+        6/LHandTouchLeft_frame:
+          Value: false
+        6/LHandTouchRight_frame:
+          Value: false
+        6/LHip:
+          Value: false
+        6/LInfraRed_frame:
+          Value: false
+        6/LPelvis:
+          Value: false
+        6/LShoulder:
+          Value: false
+        6/LSonar_frame:
+          Value: false
+        6/LThigh:
+          Value: false
+        6/LThumb1_link:
+          Value: false
+        6/LThumb2_link:
+          Value: false
+        6/LTibia:
+          Value: false
+        6/MicroFrontCenter_frame:
+          Value: false
+        6/MicroRearCenter_frame:
+          Value: false
+        6/MicroSurroundLeft_frame:
+          Value: false
+        6/MicroSurroundRight_frame:
+          Value: false
+        6/Neck:
+          Value: false
+        6/RAnklePitch:
+          Value: false
+        6/RBicep:
+          Value: false
+        6/RElbow:
+          Value: false
+        6/RFinger11_link:
+          Value: false
+        6/RFinger12_link:
+          Value: false
+        6/RFinger13_link:
+          Value: false
+        6/RFinger21_link:
+          Value: false
+        6/RFinger22_link:
+          Value: false
+        6/RFinger23_link:
+          Value: false
+        6/RFootBumperLeft_frame:
+          Value: false
+        6/RFootBumperRight_frame:
+          Value: false
+        6/RForeArm:
+          Value: false
+        6/RFsrFL_frame:
+          Value: false
+        6/RFsrFR_frame:
+          Value: false
+        6/RFsrRL_frame:
+          Value: false
+        6/RFsrRR_frame:
+          Value: false
+        6/RHandTouchBack_frame:
+          Value: false
+        6/RHandTouchLeft_frame:
+          Value: false
+        6/RHandTouchRight_frame:
+          Value: false
+        6/RHip:
+          Value: false
+        6/RInfraRed_frame:
+          Value: false
+        6/RPelvis:
+          Value: false
+        6/RShoulder:
+          Value: false
+        6/RSonar_frame:
+          Value: false
+        6/RThigh:
+          Value: false
+        6/RThumb1_link:
+          Value: false
+        6/RThumb2_link:
+          Value: false
+        6/RTibia:
+          Value: false
+        6/base_link:
+          Value: true
+        6/gaze:
+          Value: false
+        6/l_ankle:
+          Value: false
+        6/l_gripper:
+          Value: false
+        6/l_sole:
+          Value: false
+        6/l_wrist:
+          Value: false
+        6/r_ankle:
+          Value: false
+        6/r_gripper:
+          Value: false
+        6/r_sole:
+          Value: false
+        6/r_wrist:
+          Value: false
+        6/torso:
+          Value: false
+        All Enabled: false
         CameraBottom_frame:
-          Value: true
+          Value: false
         CameraBottom_optical_frame:
-          Value: true
+          Value: false
         CameraTop_frame:
-          Value: true
+          Value: false
         CameraTop_optical_frame:
-          Value: true
+          Value: false
         ChestButton_frame:
-          Value: true
+          Value: false
         Head:
-          Value: true
+          Value: false
         HeadTouchFront_frame:
-          Value: true
+          Value: false
         HeadTouchMiddle_frame:
-          Value: true
+          Value: false
         HeadTouchRear_frame:
-          Value: true
+          Value: false
         ImuTorsoAccelerometer_frame:
-          Value: true
+          Value: false
         ImuTorsoGyrometer_frame:
-          Value: true
+          Value: false
         LAnklePitch:
-          Value: true
+          Value: false
         LBicep:
-          Value: true
+          Value: false
         LElbow:
-          Value: true
+          Value: false
         LFinger11_link:
-          Value: true
+          Value: false
         LFinger12_link:
-          Value: true
+          Value: false
         LFinger13_link:
-          Value: true
+          Value: false
         LFinger21_link:
-          Value: true
+          Value: false
         LFinger22_link:
-          Value: true
+          Value: false
         LFinger23_link:
-          Value: true
+          Value: false
         LFootBumperLeft_frame:
-          Value: true
+          Value: false
         LFootBumperRight_frame:
-          Value: true
+          Value: false
         LForeArm:
-          Value: true
+          Value: false
         LFsrFL_frame:
-          Value: true
+          Value: false
         LFsrFR_frame:
-          Value: true
+          Value: false
         LFsrRL_frame:
-          Value: true
+          Value: false
         LFsrRR_frame:
-          Value: true
+          Value: false
         LHandTouchBack_frame:
-          Value: true
+          Value: false
         LHandTouchLeft_frame:
-          Value: true
+          Value: false
         LHandTouchRight_frame:
-          Value: true
+          Value: false
         LHip:
-          Value: true
+          Value: false
         LInfraRed_frame:
-          Value: true
+          Value: false
         LPelvis:
-          Value: true
+          Value: false
         LShoulder:
-          Value: true
+          Value: false
         LSonar_frame:
-          Value: true
+          Value: false
         LThigh:
-          Value: true
+          Value: false
         LThumb1_link:
-          Value: true
+          Value: false
         LThumb2_link:
-          Value: true
+          Value: false
         LTibia:
-          Value: true
+          Value: false
         MicroFrontCenter_frame:
-          Value: true
+          Value: false
         MicroRearCenter_frame:
-          Value: true
+          Value: false
         MicroSurroundLeft_frame:
-          Value: true
+          Value: false
         MicroSurroundRight_frame:
-          Value: true
+          Value: false
         Neck:
-          Value: true
+          Value: false
         RAnklePitch:
-          Value: true
+          Value: false
         RBicep:
-          Value: true
+          Value: false
         RElbow:
-          Value: true
+          Value: false
         RFinger11_link:
-          Value: true
+          Value: false
         RFinger12_link:
-          Value: true
+          Value: false
         RFinger13_link:
-          Value: true
+          Value: false
         RFinger21_link:
-          Value: true
+          Value: false
         RFinger22_link:
-          Value: true
+          Value: false
         RFinger23_link:
-          Value: true
+          Value: false
         RFootBumperLeft_frame:
-          Value: true
+          Value: false
         RFootBumperRight_frame:
-          Value: true
+          Value: false
         RForeArm:
-          Value: true
+          Value: false
         RFsrFL_frame:
-          Value: true
+          Value: false
         RFsrFR_frame:
-          Value: true
+          Value: false
         RFsrRL_frame:
-          Value: true
+          Value: false
         RFsrRR_frame:
-          Value: true
+          Value: false
         RHandTouchBack_frame:
-          Value: true
+          Value: false
         RHandTouchLeft_frame:
-          Value: true
+          Value: false
         RHandTouchRight_frame:
-          Value: true
+          Value: false
         RHip:
-          Value: true
+          Value: false
         RInfraRed_frame:
-          Value: true
+          Value: false
         RPelvis:
-          Value: true
+          Value: false
         RShoulder:
-          Value: true
+          Value: false
         RSonar_frame:
-          Value: true
+          Value: false
         RThigh:
-          Value: true
+          Value: false
         RThumb1_link:
-          Value: true
+          Value: false
         RThumb2_link:
-          Value: true
+          Value: false
         RTibia:
-          Value: true
+          Value: false
         base_link:
           Value: true
         gaze:
-          Value: true
+          Value: false
         l_ankle:
-          Value: true
+          Value: false
         l_gripper:
-          Value: true
+          Value: false
         l_sole:
-          Value: true
+          Value: false
         l_wrist:
-          Value: true
+          Value: false
         r_ankle:
-          Value: true
+          Value: false
         r_gripper:
-          Value: true
+          Value: false
         r_sole:
-          Value: true
+          Value: false
         r_wrist:
-          Value: true
+          Value: false
         torso:
-          Value: true
+          Value: false
         world:
-          Value: true
-      Marker Scale: 0.300000012
+          Value: false
+      Marker Scale: 0.5
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
         world:
+          0/base_link:
+            0/torso:
+              0/ChestButton_frame:
+                {}
+              0/ImuTorsoAccelerometer_frame:
+                {}
+              0/ImuTorsoGyrometer_frame:
+                {}
+              0/LPelvis:
+                0/LHip:
+                  0/LThigh:
+                    0/LTibia:
+                      0/LAnklePitch:
+                        0/l_ankle:
+                          0/LFootBumperLeft_frame:
+                            {}
+                          0/LFootBumperRight_frame:
+                            {}
+                          0/LFsrFL_frame:
+                            {}
+                          0/LFsrFR_frame:
+                            {}
+                          0/LFsrRL_frame:
+                            {}
+                          0/LFsrRR_frame:
+                            {}
+                          0/l_sole:
+                            {}
+              0/LShoulder:
+                0/LBicep:
+                  0/LElbow:
+                    0/LForeArm:
+                      0/l_wrist:
+                        0/LFinger11_link:
+                          0/LFinger12_link:
+                            0/LFinger13_link:
+                              {}
+                        0/LFinger21_link:
+                          0/LFinger22_link:
+                            0/LFinger23_link:
+                              {}
+                        0/LHandTouchBack_frame:
+                          {}
+                        0/LHandTouchLeft_frame:
+                          {}
+                        0/LHandTouchRight_frame:
+                          {}
+                        0/LThumb1_link:
+                          0/LThumb2_link:
+                            {}
+                        0/l_gripper:
+                          {}
+              0/LSonar_frame:
+                {}
+              0/Neck:
+                0/Head:
+                  0/CameraBottom_frame:
+                    0/CameraBottom_optical_frame:
+                      {}
+                  0/CameraTop_frame:
+                    0/CameraTop_optical_frame:
+                      {}
+                  0/HeadTouchFront_frame:
+                    {}
+                  0/HeadTouchMiddle_frame:
+                    {}
+                  0/HeadTouchRear_frame:
+                    {}
+                  0/LInfraRed_frame:
+                    {}
+                  0/MicroFrontCenter_frame:
+                    {}
+                  0/MicroRearCenter_frame:
+                    {}
+                  0/MicroSurroundLeft_frame:
+                    {}
+                  0/MicroSurroundRight_frame:
+                    {}
+                  0/RInfraRed_frame:
+                    {}
+                  0/gaze:
+                    {}
+              0/RPelvis:
+                0/RHip:
+                  0/RThigh:
+                    0/RTibia:
+                      0/RAnklePitch:
+                        0/r_ankle:
+                          0/RFootBumperLeft_frame:
+                            {}
+                          0/RFootBumperRight_frame:
+                            {}
+                          0/RFsrFL_frame:
+                            {}
+                          0/RFsrFR_frame:
+                            {}
+                          0/RFsrRL_frame:
+                            {}
+                          0/RFsrRR_frame:
+                            {}
+                          0/r_sole:
+                            {}
+              0/RShoulder:
+                0/RBicep:
+                  0/RElbow:
+                    0/RForeArm:
+                      0/r_wrist:
+                        0/RFinger11_link:
+                          0/RFinger12_link:
+                            0/RFinger13_link:
+                              {}
+                        0/RFinger21_link:
+                          0/RFinger22_link:
+                            0/RFinger23_link:
+                              {}
+                        0/RHandTouchBack_frame:
+                          {}
+                        0/RHandTouchLeft_frame:
+                          {}
+                        0/RHandTouchRight_frame:
+                          {}
+                        0/RThumb1_link:
+                          0/RThumb2_link:
+                            {}
+                        0/r_gripper:
+                          {}
+              0/RSonar_frame:
+                {}
+          1/base_link:
+            1/torso:
+              1/ChestButton_frame:
+                {}
+              1/ImuTorsoAccelerometer_frame:
+                {}
+              1/ImuTorsoGyrometer_frame:
+                {}
+              1/LPelvis:
+                1/LHip:
+                  1/LThigh:
+                    1/LTibia:
+                      1/LAnklePitch:
+                        1/l_ankle:
+                          1/LFootBumperLeft_frame:
+                            {}
+                          1/LFootBumperRight_frame:
+                            {}
+                          1/LFsrFL_frame:
+                            {}
+                          1/LFsrFR_frame:
+                            {}
+                          1/LFsrRL_frame:
+                            {}
+                          1/LFsrRR_frame:
+                            {}
+                          1/l_sole:
+                            {}
+              1/LShoulder:
+                1/LBicep:
+                  1/LElbow:
+                    1/LForeArm:
+                      1/l_wrist:
+                        1/LFinger11_link:
+                          1/LFinger12_link:
+                            1/LFinger13_link:
+                              {}
+                        1/LFinger21_link:
+                          1/LFinger22_link:
+                            1/LFinger23_link:
+                              {}
+                        1/LHandTouchBack_frame:
+                          {}
+                        1/LHandTouchLeft_frame:
+                          {}
+                        1/LHandTouchRight_frame:
+                          {}
+                        1/LThumb1_link:
+                          1/LThumb2_link:
+                            {}
+                        1/l_gripper:
+                          {}
+              1/LSonar_frame:
+                {}
+              1/Neck:
+                1/Head:
+                  1/CameraBottom_frame:
+                    1/CameraBottom_optical_frame:
+                      {}
+                  1/CameraTop_frame:
+                    1/CameraTop_optical_frame:
+                      {}
+                  1/HeadTouchFront_frame:
+                    {}
+                  1/HeadTouchMiddle_frame:
+                    {}
+                  1/HeadTouchRear_frame:
+                    {}
+                  1/LInfraRed_frame:
+                    {}
+                  1/MicroFrontCenter_frame:
+                    {}
+                  1/MicroRearCenter_frame:
+                    {}
+                  1/MicroSurroundLeft_frame:
+                    {}
+                  1/MicroSurroundRight_frame:
+                    {}
+                  1/RInfraRed_frame:
+                    {}
+                  1/gaze:
+                    {}
+              1/RPelvis:
+                1/RHip:
+                  1/RThigh:
+                    1/RTibia:
+                      1/RAnklePitch:
+                        1/r_ankle:
+                          1/RFootBumperLeft_frame:
+                            {}
+                          1/RFootBumperRight_frame:
+                            {}
+                          1/RFsrFL_frame:
+                            {}
+                          1/RFsrFR_frame:
+                            {}
+                          1/RFsrRL_frame:
+                            {}
+                          1/RFsrRR_frame:
+                            {}
+                          1/r_sole:
+                            {}
+              1/RShoulder:
+                1/RBicep:
+                  1/RElbow:
+                    1/RForeArm:
+                      1/r_wrist:
+                        1/RFinger11_link:
+                          1/RFinger12_link:
+                            1/RFinger13_link:
+                              {}
+                        1/RFinger21_link:
+                          1/RFinger22_link:
+                            1/RFinger23_link:
+                              {}
+                        1/RHandTouchBack_frame:
+                          {}
+                        1/RHandTouchLeft_frame:
+                          {}
+                        1/RHandTouchRight_frame:
+                          {}
+                        1/RThumb1_link:
+                          1/RThumb2_link:
+                            {}
+                        1/r_gripper:
+                          {}
+              1/RSonar_frame:
+                {}
+          2/base_link:
+            2/torso:
+              2/ChestButton_frame:
+                {}
+              2/ImuTorsoAccelerometer_frame:
+                {}
+              2/ImuTorsoGyrometer_frame:
+                {}
+              2/LPelvis:
+                2/LHip:
+                  2/LThigh:
+                    2/LTibia:
+                      2/LAnklePitch:
+                        2/l_ankle:
+                          2/LFootBumperLeft_frame:
+                            {}
+                          2/LFootBumperRight_frame:
+                            {}
+                          2/LFsrFL_frame:
+                            {}
+                          2/LFsrFR_frame:
+                            {}
+                          2/LFsrRL_frame:
+                            {}
+                          2/LFsrRR_frame:
+                            {}
+                          2/l_sole:
+                            {}
+              2/LShoulder:
+                2/LBicep:
+                  2/LElbow:
+                    2/LForeArm:
+                      2/l_wrist:
+                        2/LFinger11_link:
+                          2/LFinger12_link:
+                            2/LFinger13_link:
+                              {}
+                        2/LFinger21_link:
+                          2/LFinger22_link:
+                            2/LFinger23_link:
+                              {}
+                        2/LHandTouchBack_frame:
+                          {}
+                        2/LHandTouchLeft_frame:
+                          {}
+                        2/LHandTouchRight_frame:
+                          {}
+                        2/LThumb1_link:
+                          2/LThumb2_link:
+                            {}
+                        2/l_gripper:
+                          {}
+              2/LSonar_frame:
+                {}
+              2/Neck:
+                2/Head:
+                  2/CameraBottom_frame:
+                    2/CameraBottom_optical_frame:
+                      {}
+                  2/CameraTop_frame:
+                    2/CameraTop_optical_frame:
+                      {}
+                  2/HeadTouchFront_frame:
+                    {}
+                  2/HeadTouchMiddle_frame:
+                    {}
+                  2/HeadTouchRear_frame:
+                    {}
+                  2/LInfraRed_frame:
+                    {}
+                  2/MicroFrontCenter_frame:
+                    {}
+                  2/MicroRearCenter_frame:
+                    {}
+                  2/MicroSurroundLeft_frame:
+                    {}
+                  2/MicroSurroundRight_frame:
+                    {}
+                  2/RInfraRed_frame:
+                    {}
+                  2/gaze:
+                    {}
+              2/RPelvis:
+                2/RHip:
+                  2/RThigh:
+                    2/RTibia:
+                      2/RAnklePitch:
+                        2/r_ankle:
+                          2/RFootBumperLeft_frame:
+                            {}
+                          2/RFootBumperRight_frame:
+                            {}
+                          2/RFsrFL_frame:
+                            {}
+                          2/RFsrFR_frame:
+                            {}
+                          2/RFsrRL_frame:
+                            {}
+                          2/RFsrRR_frame:
+                            {}
+                          2/r_sole:
+                            {}
+              2/RShoulder:
+                2/RBicep:
+                  2/RElbow:
+                    2/RForeArm:
+                      2/r_wrist:
+                        2/RFinger11_link:
+                          2/RFinger12_link:
+                            2/RFinger13_link:
+                              {}
+                        2/RFinger21_link:
+                          2/RFinger22_link:
+                            2/RFinger23_link:
+                              {}
+                        2/RHandTouchBack_frame:
+                          {}
+                        2/RHandTouchLeft_frame:
+                          {}
+                        2/RHandTouchRight_frame:
+                          {}
+                        2/RThumb1_link:
+                          2/RThumb2_link:
+                            {}
+                        2/r_gripper:
+                          {}
+              2/RSonar_frame:
+                {}
+          3/base_link:
+            3/torso:
+              3/ChestButton_frame:
+                {}
+              3/ImuTorsoAccelerometer_frame:
+                {}
+              3/ImuTorsoGyrometer_frame:
+                {}
+              3/LPelvis:
+                3/LHip:
+                  3/LThigh:
+                    3/LTibia:
+                      3/LAnklePitch:
+                        3/l_ankle:
+                          3/LFootBumperLeft_frame:
+                            {}
+                          3/LFootBumperRight_frame:
+                            {}
+                          3/LFsrFL_frame:
+                            {}
+                          3/LFsrFR_frame:
+                            {}
+                          3/LFsrRL_frame:
+                            {}
+                          3/LFsrRR_frame:
+                            {}
+                          3/l_sole:
+                            {}
+              3/LShoulder:
+                3/LBicep:
+                  3/LElbow:
+                    3/LForeArm:
+                      3/l_wrist:
+                        3/LFinger11_link:
+                          3/LFinger12_link:
+                            3/LFinger13_link:
+                              {}
+                        3/LFinger21_link:
+                          3/LFinger22_link:
+                            3/LFinger23_link:
+                              {}
+                        3/LHandTouchBack_frame:
+                          {}
+                        3/LHandTouchLeft_frame:
+                          {}
+                        3/LHandTouchRight_frame:
+                          {}
+                        3/LThumb1_link:
+                          3/LThumb2_link:
+                            {}
+                        3/l_gripper:
+                          {}
+              3/LSonar_frame:
+                {}
+              3/Neck:
+                3/Head:
+                  3/CameraBottom_frame:
+                    3/CameraBottom_optical_frame:
+                      {}
+                  3/CameraTop_frame:
+                    3/CameraTop_optical_frame:
+                      {}
+                  3/HeadTouchFront_frame:
+                    {}
+                  3/HeadTouchMiddle_frame:
+                    {}
+                  3/HeadTouchRear_frame:
+                    {}
+                  3/LInfraRed_frame:
+                    {}
+                  3/MicroFrontCenter_frame:
+                    {}
+                  3/MicroRearCenter_frame:
+                    {}
+                  3/MicroSurroundLeft_frame:
+                    {}
+                  3/MicroSurroundRight_frame:
+                    {}
+                  3/RInfraRed_frame:
+                    {}
+                  3/gaze:
+                    {}
+              3/RPelvis:
+                3/RHip:
+                  3/RThigh:
+                    3/RTibia:
+                      3/RAnklePitch:
+                        3/r_ankle:
+                          3/RFootBumperLeft_frame:
+                            {}
+                          3/RFootBumperRight_frame:
+                            {}
+                          3/RFsrFL_frame:
+                            {}
+                          3/RFsrFR_frame:
+                            {}
+                          3/RFsrRL_frame:
+                            {}
+                          3/RFsrRR_frame:
+                            {}
+                          3/r_sole:
+                            {}
+              3/RShoulder:
+                3/RBicep:
+                  3/RElbow:
+                    3/RForeArm:
+                      3/r_wrist:
+                        3/RFinger11_link:
+                          3/RFinger12_link:
+                            3/RFinger13_link:
+                              {}
+                        3/RFinger21_link:
+                          3/RFinger22_link:
+                            3/RFinger23_link:
+                              {}
+                        3/RHandTouchBack_frame:
+                          {}
+                        3/RHandTouchLeft_frame:
+                          {}
+                        3/RHandTouchRight_frame:
+                          {}
+                        3/RThumb1_link:
+                          3/RThumb2_link:
+                            {}
+                        3/r_gripper:
+                          {}
+              3/RSonar_frame:
+                {}
+          4/base_link:
+            4/torso:
+              4/ChestButton_frame:
+                {}
+              4/ImuTorsoAccelerometer_frame:
+                {}
+              4/ImuTorsoGyrometer_frame:
+                {}
+              4/LPelvis:
+                4/LHip:
+                  4/LThigh:
+                    4/LTibia:
+                      4/LAnklePitch:
+                        4/l_ankle:
+                          4/LFootBumperLeft_frame:
+                            {}
+                          4/LFootBumperRight_frame:
+                            {}
+                          4/LFsrFL_frame:
+                            {}
+                          4/LFsrFR_frame:
+                            {}
+                          4/LFsrRL_frame:
+                            {}
+                          4/LFsrRR_frame:
+                            {}
+                          4/l_sole:
+                            {}
+              4/LShoulder:
+                4/LBicep:
+                  4/LElbow:
+                    4/LForeArm:
+                      4/l_wrist:
+                        4/LFinger11_link:
+                          4/LFinger12_link:
+                            4/LFinger13_link:
+                              {}
+                        4/LFinger21_link:
+                          4/LFinger22_link:
+                            4/LFinger23_link:
+                              {}
+                        4/LHandTouchBack_frame:
+                          {}
+                        4/LHandTouchLeft_frame:
+                          {}
+                        4/LHandTouchRight_frame:
+                          {}
+                        4/LThumb1_link:
+                          4/LThumb2_link:
+                            {}
+                        4/l_gripper:
+                          {}
+              4/LSonar_frame:
+                {}
+              4/Neck:
+                4/Head:
+                  4/CameraBottom_frame:
+                    4/CameraBottom_optical_frame:
+                      {}
+                  4/CameraTop_frame:
+                    4/CameraTop_optical_frame:
+                      {}
+                  4/HeadTouchFront_frame:
+                    {}
+                  4/HeadTouchMiddle_frame:
+                    {}
+                  4/HeadTouchRear_frame:
+                    {}
+                  4/LInfraRed_frame:
+                    {}
+                  4/MicroFrontCenter_frame:
+                    {}
+                  4/MicroRearCenter_frame:
+                    {}
+                  4/MicroSurroundLeft_frame:
+                    {}
+                  4/MicroSurroundRight_frame:
+                    {}
+                  4/RInfraRed_frame:
+                    {}
+                  4/gaze:
+                    {}
+              4/RPelvis:
+                4/RHip:
+                  4/RThigh:
+                    4/RTibia:
+                      4/RAnklePitch:
+                        4/r_ankle:
+                          4/RFootBumperLeft_frame:
+                            {}
+                          4/RFootBumperRight_frame:
+                            {}
+                          4/RFsrFL_frame:
+                            {}
+                          4/RFsrFR_frame:
+                            {}
+                          4/RFsrRL_frame:
+                            {}
+                          4/RFsrRR_frame:
+                            {}
+                          4/r_sole:
+                            {}
+              4/RShoulder:
+                4/RBicep:
+                  4/RElbow:
+                    4/RForeArm:
+                      4/r_wrist:
+                        4/RFinger11_link:
+                          4/RFinger12_link:
+                            4/RFinger13_link:
+                              {}
+                        4/RFinger21_link:
+                          4/RFinger22_link:
+                            4/RFinger23_link:
+                              {}
+                        4/RHandTouchBack_frame:
+                          {}
+                        4/RHandTouchLeft_frame:
+                          {}
+                        4/RHandTouchRight_frame:
+                          {}
+                        4/RThumb1_link:
+                          4/RThumb2_link:
+                            {}
+                        4/r_gripper:
+                          {}
+              4/RSonar_frame:
+                {}
+          5/base_link:
+            5/torso:
+              5/ChestButton_frame:
+                {}
+              5/ImuTorsoAccelerometer_frame:
+                {}
+              5/ImuTorsoGyrometer_frame:
+                {}
+              5/LPelvis:
+                5/LHip:
+                  5/LThigh:
+                    5/LTibia:
+                      5/LAnklePitch:
+                        5/l_ankle:
+                          5/LFootBumperLeft_frame:
+                            {}
+                          5/LFootBumperRight_frame:
+                            {}
+                          5/LFsrFL_frame:
+                            {}
+                          5/LFsrFR_frame:
+                            {}
+                          5/LFsrRL_frame:
+                            {}
+                          5/LFsrRR_frame:
+                            {}
+                          5/l_sole:
+                            {}
+              5/LShoulder:
+                5/LBicep:
+                  5/LElbow:
+                    5/LForeArm:
+                      5/l_wrist:
+                        5/LFinger11_link:
+                          5/LFinger12_link:
+                            5/LFinger13_link:
+                              {}
+                        5/LFinger21_link:
+                          5/LFinger22_link:
+                            5/LFinger23_link:
+                              {}
+                        5/LHandTouchBack_frame:
+                          {}
+                        5/LHandTouchLeft_frame:
+                          {}
+                        5/LHandTouchRight_frame:
+                          {}
+                        5/LThumb1_link:
+                          5/LThumb2_link:
+                            {}
+                        5/l_gripper:
+                          {}
+              5/LSonar_frame:
+                {}
+              5/Neck:
+                5/Head:
+                  5/CameraBottom_frame:
+                    5/CameraBottom_optical_frame:
+                      {}
+                  5/CameraTop_frame:
+                    5/CameraTop_optical_frame:
+                      {}
+                  5/HeadTouchFront_frame:
+                    {}
+                  5/HeadTouchMiddle_frame:
+                    {}
+                  5/HeadTouchRear_frame:
+                    {}
+                  5/LInfraRed_frame:
+                    {}
+                  5/MicroFrontCenter_frame:
+                    {}
+                  5/MicroRearCenter_frame:
+                    {}
+                  5/MicroSurroundLeft_frame:
+                    {}
+                  5/MicroSurroundRight_frame:
+                    {}
+                  5/RInfraRed_frame:
+                    {}
+                  5/gaze:
+                    {}
+              5/RPelvis:
+                5/RHip:
+                  5/RThigh:
+                    5/RTibia:
+                      5/RAnklePitch:
+                        5/r_ankle:
+                          5/RFootBumperLeft_frame:
+                            {}
+                          5/RFootBumperRight_frame:
+                            {}
+                          5/RFsrFL_frame:
+                            {}
+                          5/RFsrFR_frame:
+                            {}
+                          5/RFsrRL_frame:
+                            {}
+                          5/RFsrRR_frame:
+                            {}
+                          5/r_sole:
+                            {}
+              5/RShoulder:
+                5/RBicep:
+                  5/RElbow:
+                    5/RForeArm:
+                      5/r_wrist:
+                        5/RFinger11_link:
+                          5/RFinger12_link:
+                            5/RFinger13_link:
+                              {}
+                        5/RFinger21_link:
+                          5/RFinger22_link:
+                            5/RFinger23_link:
+                              {}
+                        5/RHandTouchBack_frame:
+                          {}
+                        5/RHandTouchLeft_frame:
+                          {}
+                        5/RHandTouchRight_frame:
+                          {}
+                        5/RThumb1_link:
+                          5/RThumb2_link:
+                            {}
+                        5/r_gripper:
+                          {}
+              5/RSonar_frame:
+                {}
+          6/base_link:
+            6/torso:
+              6/ChestButton_frame:
+                {}
+              6/ImuTorsoAccelerometer_frame:
+                {}
+              6/ImuTorsoGyrometer_frame:
+                {}
+              6/LPelvis:
+                6/LHip:
+                  6/LThigh:
+                    6/LTibia:
+                      6/LAnklePitch:
+                        6/l_ankle:
+                          6/LFootBumperLeft_frame:
+                            {}
+                          6/LFootBumperRight_frame:
+                            {}
+                          6/LFsrFL_frame:
+                            {}
+                          6/LFsrFR_frame:
+                            {}
+                          6/LFsrRL_frame:
+                            {}
+                          6/LFsrRR_frame:
+                            {}
+                          6/l_sole:
+                            {}
+              6/LShoulder:
+                6/LBicep:
+                  6/LElbow:
+                    6/LForeArm:
+                      6/l_wrist:
+                        6/LFinger11_link:
+                          6/LFinger12_link:
+                            6/LFinger13_link:
+                              {}
+                        6/LFinger21_link:
+                          6/LFinger22_link:
+                            6/LFinger23_link:
+                              {}
+                        6/LHandTouchBack_frame:
+                          {}
+                        6/LHandTouchLeft_frame:
+                          {}
+                        6/LHandTouchRight_frame:
+                          {}
+                        6/LThumb1_link:
+                          6/LThumb2_link:
+                            {}
+                        6/l_gripper:
+                          {}
+              6/LSonar_frame:
+                {}
+              6/Neck:
+                6/Head:
+                  6/CameraBottom_frame:
+                    6/CameraBottom_optical_frame:
+                      {}
+                  6/CameraTop_frame:
+                    6/CameraTop_optical_frame:
+                      {}
+                  6/HeadTouchFront_frame:
+                    {}
+                  6/HeadTouchMiddle_frame:
+                    {}
+                  6/HeadTouchRear_frame:
+                    {}
+                  6/LInfraRed_frame:
+                    {}
+                  6/MicroFrontCenter_frame:
+                    {}
+                  6/MicroRearCenter_frame:
+                    {}
+                  6/MicroSurroundLeft_frame:
+                    {}
+                  6/MicroSurroundRight_frame:
+                    {}
+                  6/RInfraRed_frame:
+                    {}
+                  6/gaze:
+                    {}
+              6/RPelvis:
+                6/RHip:
+                  6/RThigh:
+                    6/RTibia:
+                      6/RAnklePitch:
+                        6/r_ankle:
+                          6/RFootBumperLeft_frame:
+                            {}
+                          6/RFootBumperRight_frame:
+                            {}
+                          6/RFsrFL_frame:
+                            {}
+                          6/RFsrFR_frame:
+                            {}
+                          6/RFsrRL_frame:
+                            {}
+                          6/RFsrRR_frame:
+                            {}
+                          6/r_sole:
+                            {}
+              6/RShoulder:
+                6/RBicep:
+                  6/RElbow:
+                    6/RForeArm:
+                      6/r_wrist:
+                        6/RFinger11_link:
+                          6/RFinger12_link:
+                            6/RFinger13_link:
+                              {}
+                        6/RFinger21_link:
+                          6/RFinger22_link:
+                            6/RFinger23_link:
+                              {}
+                        6/RHandTouchBack_frame:
+                          {}
+                        6/RHandTouchLeft_frame:
+                          {}
+                        6/RHandTouchRight_frame:
+                          {}
+                        6/RThumb1_link:
+                          6/RThumb2_link:
+                            {}
+                        6/r_gripper:
+                          {}
+              6/RSonar_frame:
+                {}
           base_link:
             torso:
               ChestButton_frame:
@@ -755,6 +2814,403 @@ Visualization Manager:
                 {}
       Update Interval: 0
       Value: true
+    - Alpha: 0.5
+      Class: tiny_rviz_plugins/MultiRobotStateDisplay
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        CameraBottom_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        CameraBottom_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        CameraTop_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        CameraTop_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ChestButton_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Head:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        HeadTouchFront_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        HeadTouchMiddle_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        HeadTouchRear_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ImuTorsoAccelerometer_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ImuTorsoGyrometer_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        LAnklePitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LBicep:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LElbow:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        LFinger11_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger12_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger13_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger21_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger22_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger23_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFootBumperLeft_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        LFootBumperRight_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        LForeArm:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFsrFL_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFsrFR_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFsrRL_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFsrRR_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LHandTouchBack_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        LHandTouchLeft_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        LHandTouchRight_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        LHip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LInfraRed_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        LPelvis:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LShoulder:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LSonar_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        LThigh:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LThumb1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LThumb2_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LTibia:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link Tree Style: Links in Alphabetic Order
+        MicroFrontCenter_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        MicroRearCenter_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        MicroSurroundLeft_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        MicroSurroundRight_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Neck:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RAnklePitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RBicep:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RElbow:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        RFinger11_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger12_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger13_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger21_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger22_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger23_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFootBumperLeft_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        RFootBumperRight_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        RForeArm:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFsrFL_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFsrFR_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFsrRL_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFsrRR_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RHandTouchBack_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        RHandTouchLeft_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        RHandTouchRight_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        RHip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RInfraRed_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        RPelvis:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RShoulder:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RSonar_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        RThigh:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RThumb1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RThumb2_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RTibia:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        gaze:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        l_ankle:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_gripper:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        l_sole:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        l_wrist:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_ankle:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_gripper:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        r_sole:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        r_wrist:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        torso:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: MultiRobotStateDisplay
+      Robot Description: robot_description
+      TF Prefix: ""
+      Topic: /multi_robot_state
+      Unreliable: false
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -790,23 +3246,23 @@ Visualization Manager:
         X: 0
         Y: 0
         Z: 0
-      Focal Shape Fixed Size: true
+      Focal Shape Fixed Size: false
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.785398006
+      Pitch: 0.785398185
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.785398006
+      Yaw: 0.785398185
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 846
+  Height: 1056
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000016a000002c4fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006100fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c0061007900730100000028000002c4000000d700fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f000002c4fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730100000028000002c4000000ad00fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000003f70000003efc0100000002fb0000000800540069006d00650100000000000003f70000030000fffffffb0000000800540069006d0065010000000000000450000000000000000000000172000002c400000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000004000000000000017000000396fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006100fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000002800000396000000d700fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f00000396fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000002800000396000000ad00fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000073f0000003efc0100000002fb0000000800540069006d006501000000000000073f0000030000fffffffb0000000800540069006d00650100000000000004500000000000000000000004b40000039600000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -815,6 +3271,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: false
-  Width: 1015
-  X: 65
-  Y: 60
+  Width: 1855
+  X: 1145
+  Y: 198
