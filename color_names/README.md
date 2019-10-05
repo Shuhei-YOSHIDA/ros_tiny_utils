@@ -26,3 +26,6 @@ std_msgs::ColorRGBA skyblue_color_msg = color_names::makeColorMsg("skyblue", 0.5
 // skyblue_color_msg.b = 0.921569;
 // skyblue_color_msg.a = 0.5;
 ```
+
+## Sample
+![color_names example](https://raw.githubusercontent.com/Shuhei-YOSHIDA/ros_tiny_utils/master/color_names/images/color_names_sample.png)

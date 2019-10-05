@@ -41,3 +41,6 @@ visualization_msgs::Marker arrow_marker = easy_marker::makeMarkerARROWTemplate(s
 
 // More functions are provided.
 ```
+
+## Sample
+![easy_marker example](https://raw.githubusercontent.com/Shuhei-YOSHIDA/ros_tiny_utils/master/easy_marker/images/easy_marker_sample.png)
