@@ -1,0 +1,9 @@
+<library path="lib/libtiny_rviz_plugins">
+  <class name="tiny_rviz_plugins/MultiRobotStateDisplay"
+         type="tiny_rviz_plugins::MultiRobotModelDisplaySubs"
+         base_class_type="rviz::Display">
+    <description>
+      Display successive 3D image from a set of JointState msg and tf pose from world to one body of each robot.
+    </description>
+  </class>
+</library>

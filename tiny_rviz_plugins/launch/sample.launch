@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="version" default="V40" />
+    <include file="$(find nao_description)/launch/robot_state_publisher.launch">
+            <arg name="version" value="$(arg version)" />
+  </include>
+
+  <arg name="gui" default="true" />
+    <param name="use_gui" value="$(arg gui)"/>
+      <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+  <arg name="config_file" default="$(find tiny_rviz_plugins)/launch/sample.rviz"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg config_file)" />
+</launch>
