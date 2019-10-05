@@ -12,4 +12,7 @@
 
   <arg name="config_file" default="$(find tiny_rviz_plugins)/launch/sample.rviz"/>
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg config_file)" />
+
+  <node name="sample_mrsd" pkg="tiny_rviz_plugins" type="sample_multirobotstatedisplay_node"/>
+
 </launch>

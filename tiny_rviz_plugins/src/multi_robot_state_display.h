@@ -43,7 +43,7 @@ namespace tiny_rviz_plugins
 using namespace rviz;
 /**
  * @class MultiRobotModelDisplaySubs
- * @brief Uses one robot xml description to display the pieces of multi robots at the transforms broadcast by rosTF
+ * @brief Use a urdf and subscribed message, and then display multi robot-state such as successive photo in RViz
  */
 class MultiRobotModelDisplaySubs
     : public MessageFilterDisplay<MultiRobotStateDisplay>

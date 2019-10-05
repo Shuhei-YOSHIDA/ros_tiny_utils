@@ -1,5 +1,6 @@
 /**
  * @file multi_robot_state_display.cpp
+ * @detail This code is based on a part of https://github.com/ros/robot_state_publisher
  */
 #include <OgreSceneNode.h>
 #include <OgreSceneManager.h>
@@ -7,9 +8,6 @@
 #include <tinyxml.h>
 #include <urdf/model.h>
 #include <kdl_parser/kdl_parser.hpp>
-
-//#include <tf/transform_listener.h>
-//#include <tf2_ros/transform_listener.h>
 
 #include <rviz/display_context.h>
 #include <rviz/robot/robot.h>
