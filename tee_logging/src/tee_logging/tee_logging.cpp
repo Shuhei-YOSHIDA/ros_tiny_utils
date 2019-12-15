@@ -61,3 +61,32 @@ void TeeLogging::log_fatal(const std::string& message)
   ofs_ << message << endl;
 }
 
+void TeeLogging::log_debug(stringstream& ss)
+{
+  log_debug(ss.str());
+  ss.str("");
+}
+
+void TeeLogging::log_info(stringstream& ss)
+{
+  log_info(ss.str());
+  ss.str("");
+}
+
+void TeeLogging::log_warn(stringstream& ss)
+{
+  log_warn(ss.str());
+  ss.str("");
+}
+
+void TeeLogging::log_error(stringstream& ss)
+{
+  log_error(ss.str());
+  ss.str("");
+}
+
+void TeeLogging::log_fatal(stringstream& ss)
+{
+  log_fatal(ss.str());
+  ss.str("");
+}

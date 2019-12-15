@@ -36,6 +36,13 @@ public:
   void log_error(const std::string& message);
   void log_fatal(const std::string& message);
 
+  /// @brief stringstream is filled by "" after these.
+  void log_debug(std::stringstream& ss);
+  void log_info(std::stringstream& ss);
+  void log_warn(std::stringstream& ss);
+  void log_error(std::stringstream& ss);
+  void log_fatal(std::stringstream& ss);
+
 //  void log_debug_once(const std::string& message);
 //  void log_info_once(const std::string& message);
 //  void log_warn_once(const std::string& message);
