@@ -57,5 +57,7 @@ protected:
   tf2_ros::StaticTransformBroadcaster static_tf_broadcaster_;
 };
 
+typedef std::shared_ptr<FixedStatePublisher> FixedStatePublisherPtr;
+
 }
 #endif /* ifndef INCLUDE_FIXED_STATE_PUBLISHER_H */

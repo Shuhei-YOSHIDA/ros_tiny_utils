@@ -188,7 +188,9 @@ endif()
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(sample_multirobotstatedisplay_node src/sample_multirobotstatedisplay.cpp)
-add_executable(multi_prefixed_tf_broadcaster_node src/multi_prefixed_tf_broadcaster_node.cpp)
+add_executable(multi_prefixed_tf_broadcaster_node
+    src/multi_prefixed_tf_broadcaster_node.cpp
+    src/fixed_state_broadcaster.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

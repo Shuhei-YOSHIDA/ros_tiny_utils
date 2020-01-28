@@ -13,7 +13,7 @@
 using namespace std;
 using namespace ros;
 
-namespace robot_state_publisher
+namespace fixed_state_publisher
 {
 
 FixedStatePublisher::FixedStatePublisher(const KDL::Tree& tree, const urdf::Model& model)
