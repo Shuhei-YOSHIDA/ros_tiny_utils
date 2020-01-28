@@ -191,6 +191,7 @@ add_executable(sample_multirobotstatedisplay_node src/sample_multirobotstatedisp
 add_executable(multi_prefixed_tf_broadcaster_node
     src/multi_prefixed_tf_broadcaster_node.cpp
     src/fixed_state_broadcaster.cpp)
+add_executable(sample_multiprefixedtfbroadcaster_node src/sample_multiprefixedtfbroadcaster.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -202,12 +203,16 @@ add_executable(multi_prefixed_tf_broadcaster_node
 ## same as for the library above
 add_dependencies(sample_multirobotstatedisplay_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(multi_prefixed_tf_broadcaster_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(sample_multiprefixedtfbroadcaster_node  ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(sample_multirobotstatedisplay_node
   ${catkin_LIBRARIES}
 )
 target_link_libraries(multi_prefixed_tf_broadcaster_node
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(sample_multiprefixedtfbroadcaster_node  
   ${catkin_LIBRARIES}
 )
 

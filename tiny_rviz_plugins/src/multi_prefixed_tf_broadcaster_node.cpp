@@ -4,6 +4,8 @@
 
 /*
  * 0. Set parameter for URDFs in order of rviz_tiny_plugins/MultiRobotStateDisplay
+ *    - 'mptf_datasize' Default:7
+ *    - 'mptf_[num]/robot_description' EX: "0/robot_description" If not set, use 'robot_description'
  * 1. Subscribe rviz_tiny_plugins/MultiRobotStateDisplay
  * 2. Broadcast a set of tf, where prefix is added to each tf for a robot
  * 3. Set "RobotModel" rviz plugins for each robot in RViz
@@ -34,17 +36,25 @@ private:
   tf2_ros::StaticTransformBroadcaster st_tf2_broadcaster_;
 
 public:
-  MultiPrefixedTFBroadcaster();
+  /// 
+  MultiPrefixedTFBroadcaster(int data_size = 7);
   //virtual ~MultiPrefixedTFBroadcaster();
 
   void run();
 };
 
-MultiPrefixedTFBroadcaster::MultiPrefixedTFBroadcaster()
+MultiPrefixedTFBroadcaster::MultiPrefixedTFBroadcaster(int data_size)
 {
-  // tmp for initialization
-  /// @TODO 複数のrobot_description 相当のパラメータを読めるように
-  data_size_ = 7;
+  int size;
+  if (nh_.getParam("mptb_datasize", size))
+  {
+    data_size_ = size;
+  }
+  else
+  {
+    data_size_ = data_size;
+  }
+  ROS_INFO("size of array for MultiRobotStateDisplay is set to %d", data_size_);
   models_.resize(data_size_);
   trees_.resize(data_size_);
   mimicmaps_.resize(data_size_);
@@ -52,10 +62,14 @@ MultiPrefixedTFBroadcaster::MultiPrefixedTFBroadcaster()
 
   for (int i = 0; i < data_size_; i++)
   {
-    if (!models_[i].initParam("robot_description"))
+    if (!models_[i].initParam("mptb_"+to_string(i)+"/robot_description"))
     {
-      ROS_ERROR("Failed to read parameter");
-      abort();
+      ROS_WARN("Could not load [%s], then use parameter [robot_descrition]", (to_string(i)+"/robot_description").c_str());
+      if (!models_[i].initParam("robot_description"))
+      {
+        ROS_ERROR("Failed to read parameter");
+        abort();
+      }
     }
 
     if (!kdl_parser::treeFromUrdfModel(models_[i], trees_[i]))
@@ -93,8 +107,9 @@ void MultiPrefixedTFBroadcaster::callback(const tiny_rviz_plugins::MultiRobotSta
     }
 
     /// @TODO 全てをtf_staticにする
-    pub_ptrs_[idx]->publishTransforms(joint_positions, msg->header.stamp, to_string(idx));
-    pub_ptrs_[idx]->publishFixedTransforms(to_string(idx), true);
+    string tf_prefix = "mptb_" + to_string(idx);
+    pub_ptrs_[idx]->publishTransforms(joint_positions, msg->header.stamp, tf_prefix);
+    pub_ptrs_[idx]->publishFixedTransforms(tf_prefix, true);
 
   }
 
