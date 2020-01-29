@@ -21,6 +21,12 @@ def open_rosbag(filepath):
 
     return bag
 
+"""
+Convert messages into text files, whose name is "topic_name".txt
+
+The text is YAML style, and its root is "messages".
+Example: cat thefile.txt | yq .messages
+"""
 def convert_to_textfiles(bag, directory_path):
     topic_info = bag.get_type_and_topic_info()
     all_topic_names = list(topic_info.topics.keys())
@@ -38,11 +44,18 @@ def convert_to_textfiles(bag, directory_path):
         file_list[idx].write('# topicmd5 ' + md5 + "\n")
         file_list[idx].write('# messagenum ' + str(bag.get_message_count(topic_filters=[name])) + "\n")
 
-        for msg_num, (topic, msg, t) in enumerate(bag.read_messages(topics=[name])):
-            file_list[idx].write('### message : ' + str(msg_num) + " : time [" + str(t) + "]" + "\n")
-            file_list[idx].write(str(msg) + "\n")
+        # for msg_num, (topic, msg, t) in enumerate(bag.read_messages(topics=[name])):
+            # file_list[idx].write('### message : ' + str(msg_num) + " : time [" + str(t) + "]" + "\n")
+            # file_list[idx].write(str(msg) + "\n")
+        # file_list[idx].write('# message '+ str(bag.get_message_count(topic_filters=[name])) + "\n")
 
-        file_list[idx].write('# message '+ str(bag.get_message_count(topic_filters=[name])) + "\n")
+        file_list[idx].write("messages:\n")
+        for msg_num, (topic, msg, t) in enumerate(bag.read_messages(topics=[name])):
+            file_list[idx].write("  - \n")
+            str_msg_list = ['    '+line for line in str(msg).split('\n')]
+            # file_list[idx].write(str(msg) + "\n")
+            file_list[idx].write('\n'.join(str_msg_list) + "\n")
+
 
         file_list[idx].close()
 
