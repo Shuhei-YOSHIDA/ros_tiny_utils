@@ -64,6 +64,21 @@ Marker textMarker(PoseStamped poses)
 
 void pathCB(const Path::ConstPtr& msg)
 {
+  static int previous_size = 0;
+
+  if (previous_size != 0 && previous_size != msg->poses.size())
+  {
+    Marker delete_msg;
+    delete_msg.action = Marker::DELETEALL;
+    delete_msg.header.stamp = ros::Time::now();
+    MarkerArray ma_msg;
+    ma_msg.markers.push_back(delete_msg);
+    marker_pub.publish(ma_msg);
+    ROS_WARN("Detected that size of path-msg is changed");
+    ros::Duration(0.3).sleep();
+  }
+  previous_size = msg->poses.size();
+
   MarkerArray ma_msg;
   for (int i = 0; i < msg->poses.size(); i++)
   {
