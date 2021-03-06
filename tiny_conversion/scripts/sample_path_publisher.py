@@ -21,7 +21,7 @@ def path_publisher():
         p.header = path.header
         p.pose.position.x = r*np.cos(rad)
         p.pose.position.y = r*np.sin(rad)
-        p.pose.position.z = 0
+        p.pose.position.z = float(i)
         p.pose.orientation.w = 1
         path.poses.append(p)
 
