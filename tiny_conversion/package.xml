@@ -54,6 +54,7 @@
   <depend>rosbag</depend>
   <depend>visualization_msgs</depend>
   <depend>nav_msgs</depend>
+  <depend>color_names</depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->

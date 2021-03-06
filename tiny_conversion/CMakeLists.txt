@@ -13,6 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
     rosbag
     visualization_msgs
     nav_msgs
+    color_names
 )
 
 ## System dependencies are found with CMake's conventions
