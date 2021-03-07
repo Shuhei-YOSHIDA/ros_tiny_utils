@@ -29,6 +29,9 @@ $ cat output_text.txt | yq .messages[1] # 2nd message
 Convert a topic of `nav_msgs/Path` into another topic of `visualization_msgs::MarkerArray`.
 The markers represents positions of the path by using text markers.
 
+It is able to change font size, and so on by using ros parameters.
+Please check `tiny_conversion/params/font_data.yaml`.
+
 ### How to use
 ```bash
 $ # sample launch file
