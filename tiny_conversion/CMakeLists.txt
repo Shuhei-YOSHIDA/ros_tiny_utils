@@ -13,6 +13,9 @@ find_package(catkin REQUIRED COMPONENTS
     rosbag
     visualization_msgs
     nav_msgs
+    tf2
+    tf2_ros
+    tf2_geometry_msgs
     color_names
 )
 
