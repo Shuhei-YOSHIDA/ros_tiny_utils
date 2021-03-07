@@ -16,3 +16,5 @@ Utility to execute ROS console macro (e.g. ROS_INFO) and write log-message to a 
 
 ## tiny_rviz_plugins
 RViz plugin to show multiple states of a robot at the same time
+
+**If you use ROS noetic, tiny_rviz_plugins pkg cannot be used. Please put CATKIN_IGNORE file**

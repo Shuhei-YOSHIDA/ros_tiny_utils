@@ -24,3 +24,16 @@ Hence, for example, you can treat the file by `yq` command.
 $ cat output_text.txt | yq .messages # all messages
 $ cat output_text.txt | yq .messages[1] # 2nd message
 ```
+
+## path_to_text_marker
+Convert a topic of `nav_msgs/Path` into another topic of `visualization_msgs::MarkerArray`.
+The markers represents positions of the path by using text markers.
+
+It is able to change font size, and so on by using ros parameters.
+Please check `tiny_conversion/params/font_data.yaml`.
+
+### How to use
+```bash
+$ # sample launch file
+$ roslaunch tiny_conversion sample_nav_msgs_path_to_text_marker.launch
+```

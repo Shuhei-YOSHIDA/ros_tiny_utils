@@ -1,0 +1,13 @@
+<launch>
+  <node pkg="tiny_conversion" type="path_to_text_marker_node" name="path_to_text_marker_node">
+    <rosparam command="load" file="$(find tiny_conversion)/params/font_data.yaml"/>
+  </node>
+
+  <node pkg="tiny_conversion" type="sample_path_publisher.py" name="sample_path_publisher"/>
+
+  <node pkg="tf2_ros" type="static_transform_publisher" name="static_transform_publisher"
+  args="10 0 0 0 0 0 1 world start"/>
+
+  <node pkg="rviz" type="rviz" name="rviz"
+  args="-d $(find tiny_conversion)/launch/sample_nav_msgs_path_to_text_marker.rviz"/>
+</launch>
