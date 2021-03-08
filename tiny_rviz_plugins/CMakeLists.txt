@@ -10,7 +10,7 @@ add_compile_options(-std=c++11)
 find_package(catkin REQUIRED COMPONENTS
     rviz
     sensor_msgs
-    robot_state_publisher
+    old_robot_state_publisher
     tf2
     tf2_ros
     tf2_kdl
