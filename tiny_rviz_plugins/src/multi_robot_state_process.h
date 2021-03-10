@@ -10,7 +10,7 @@
 #include <kdl/tree.hpp>
 #include <ros/ros.h>
 #include <sensor_msgs/JointState.h>
-#include <robot_state_publisher/robot_state_publisher.h>
+#include <old_robot_state_publisher/old_robot_state_publisher.h>
 #include <tf2_ros/transform_broadcaster.h>
 #include "tiny_rviz_plugins/MultiRobotStateDisplay.h"
 
@@ -18,7 +18,7 @@ typedef std::map<std::string, urdf::JointMimicSharedPtr> MimicMap;
 
 namespace tiny_rviz_plugins
 {
-using namespace robot_state_publisher;
+using namespace old_robot_state_publisher;
 
 class MultiRobotStatePublisher
 {
@@ -37,7 +37,7 @@ protected:
 
   std::string tf_prefix_;
   ros::Duration publish_interval_;
-  robot_state_publisher::RobotStatePublisher state_publisher_;
+  old_robot_state_publisher::OldRobotStatePublisher state_publisher_;
   ros::Subscriber mrmd_sub_;
   ros::Timer timer_;
   ros::Time last_callback_time_;

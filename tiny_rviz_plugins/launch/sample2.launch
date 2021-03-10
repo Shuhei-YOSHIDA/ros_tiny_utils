@@ -2,8 +2,8 @@
   <!-- sample for multi_prefixed_tf_broadcaster_node-->
 
   <param name="mptb_datasize" type="int" value="2"/>
-  <param name="mptb_0/robot_description" command="$(find xacro)/xacro.py $(find nao_description)/urdf/naoV40_generated_urdf/nao_robot.xacro"/>
-  <param name="mptb_1/robot_description" command="$(find xacro)/xacro.py $(find pepper_description)/urdf/pepper1.0_generated_urdf/pepper_robot.xacro"/>
+  <param name="mptb_0/robot_description" command="xacro $(find nao_description)/urdf/naoV40_generated_urdf/nao_robot.xacro"/>
+  <param name="mptb_1/robot_description" command="xacro $(find pepper_description)/urdf/pepper1.0_generated_urdf/pepper_robot.xacro"/>
 
   <arg name="config_file" default="$(find tiny_rviz_plugins)/launch/sample2.rviz"/>
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg config_file)" />

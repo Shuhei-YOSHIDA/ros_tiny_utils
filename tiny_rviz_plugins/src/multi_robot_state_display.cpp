@@ -157,7 +157,8 @@ void MultiRobotModelDisplaySubs::processMessage(
   {
     r->update( TFLinkUpdater( context_->getFrameManager(),
                boost::bind( linkUpdaterStatusFunction, _1, _2, _3, this ),
-               tf_prefix_property_->getStdString()+"/"+std::to_string(count) ));
+               //tf_prefix_property_->getStdString()+"/"+std::to_string(count) ));
+               std::to_string(count) ));
     count++;
   }
 }
@@ -270,7 +271,8 @@ void MultiRobotModelDisplaySubs::update( float wall_dt, float ros_dt )
     {
       r->update( TFLinkUpdater( context_->getFrameManager(),
                                 boost::bind( linkUpdaterStatusFunction, _1, _2, _3, this ),
-                                tf_prefix_property_->getStdString()+"/"+std::to_string(count) ));
+                                //tf_prefix_property_->getStdString()+"/"+std::to_string(count) ));
+                                std::to_string(count) ));
       count++;
     }
     context_->queueRender();

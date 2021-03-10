@@ -8,7 +8,7 @@
 #include <geometry_msgs/TransformStamped.h>
 #include <tf2_kdl/tf2_kdl.h>
 
-#include "robot_state_publisher/robot_state_publisher.h"
+#include "old_robot_state_publisher/old_robot_state_publisher.h"
 
 using namespace std;
 using namespace ros;
