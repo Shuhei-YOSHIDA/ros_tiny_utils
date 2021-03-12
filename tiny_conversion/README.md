@@ -44,6 +44,6 @@ Resolve url as string.
 ```cpp
 #include "tiny_conversion/resolve_path.h"
 string url = "package:://tiny_conversion/package.xml";
-string resolved_path = resolvePathUrlStr(url);
+string resolved_path = tiny_conversion::resolvePathUrlStr(url);
 // ex. resolved_path: "/home/your_user/catkin_ws/src/ros_tiny_utils/tiny_conversion/package.xml"
 ```
