@@ -37,3 +37,13 @@ Please check `tiny_conversion/params/font_data.yaml`.
 $ # sample launch file
 $ roslaunch tiny_conversion sample_nav_msgs_path_to_text_marker.launch
 ```
+
+## resolve_path.h
+Resolve url as string.
+
+```cpp
+#include "tiny_conversion/resolve_path.h"
+string url = "package:://tiny_conversion/package.xml";
+string resolved_path = resolvePathUrlStr(url);
+// ex. resolved_path: "/home/your_user/catkin_ws/src/ros_tiny_utils/tiny_conversion/package.xml"
+```

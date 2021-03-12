@@ -3,12 +3,14 @@ project(tiny_conversion)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 add_compile_options(-std=c++11)
+#add_compile_options(-std=c++17)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
     roscpp
+    roslib
     rospy
     rosbag
     visualization_msgs
@@ -20,7 +22,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 ## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
+find_package(Boost REQUIRED COMPONENTS system filesystem)
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -109,9 +111,9 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES tiny_conversion
-#  CATKIN_DEPENDS other_catkin_pkg
+  INCLUDE_DIRS include
+  LIBRARIES tiny_conversion
+  CATKIN_DEPENDS roscpp roslib
 #  DEPENDS system_lib
 )
 
@@ -122,24 +124,29 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+  include
   ${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
-# add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/tiny_conversion.cpp
-# )
+add_library(${PROJECT_NAME}
+  src/${PROJECT_NAME}/resolve_path.cpp
+)
+
+target_link_libraries(${PROJECT_NAME}
+  ${catkin_LIBRARIES}
+)
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
-# add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(path_to_text_marker_node src/nav_msgs_path_to_text_marker_node.cpp)
+add_executable(sample_resolve_path_node src/sample_resolve_path_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -150,10 +157,16 @@ add_executable(path_to_text_marker_node src/nav_msgs_path_to_text_marker_node.cp
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 add_dependencies(path_to_text_marker_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(sample_resolve_path_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(path_to_text_marker_node
   ${catkin_LIBRARIES}
+)
+target_link_libraries(sample_resolve_path_node
+  ${catkin_LIBRARIES}
+  ${PROJECT_NAME}
+  ${Boost_LIBRARIES}
 )
 
 #############
