@@ -1,5 +1,5 @@
 /**
- * @file bag_image_extractor_node.cpp
+ * @file bag_image_extractor.cpp
  * @brief Extract sensor_msgs/Image topic and save it as image files
  * @note Reference: ros-perception/image_pipeline repository, image_view package
  */
