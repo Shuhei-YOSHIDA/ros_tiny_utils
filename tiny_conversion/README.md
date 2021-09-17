@@ -47,3 +47,6 @@ string url = "package:://tiny_conversion/package.xml";
 string resolved_path = tiny_conversion::resolvePathUrlStr(url);
 // ex. resolved_path: "/home/your_user/catkin_ws/src/ros_tiny_utils/tiny_conversion/package.xml"
 ```
+
+## bag_image_extractor
+Load rosbag file and save image topic as files.
