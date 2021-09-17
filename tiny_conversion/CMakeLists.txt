@@ -19,10 +19,12 @@ find_package(catkin REQUIRED COMPONENTS
     tf2_ros
     tf2_geometry_msgs
     color_names
+    cv_bridge
 )
 
 ## System dependencies are found with CMake's conventions
 find_package(Boost REQUIRED COMPONENTS system filesystem)
+find_package(OpenCV REQUIRED)
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -147,6 +149,7 @@ add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EX
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(path_to_text_marker_node src/nav_msgs_path_to_text_marker_node.cpp)
 add_executable(sample_resolve_path_node src/sample_resolve_path_node.cpp)
+add_executable(bag_image_extractor_node src/bag_image_extractor_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -158,6 +161,7 @@ add_executable(sample_resolve_path_node src/sample_resolve_path_node.cpp)
 ## same as for the library above
 add_dependencies(path_to_text_marker_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(sample_resolve_path_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(bag_image_extractor_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(path_to_text_marker_node
@@ -167,6 +171,10 @@ target_link_libraries(sample_resolve_path_node
   ${catkin_LIBRARIES}
   ${PROJECT_NAME}
   ${Boost_LIBRARIES}
+)
+target_link_libraries(bag_image_extractor_node
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBRARIES}
 )
 
 #############
