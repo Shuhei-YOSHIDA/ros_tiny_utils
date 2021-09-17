@@ -16,8 +16,10 @@ using namespace std;
 
 void usage()
 {
-  cout << "usage:" << endl
+  cerr << "usage:" << endl
        << "rosrun tiny_conversion bag_image_extractor_node [bagfile_path] [image_topic_name] [output_dir]" << endl;
+  cerr << "example:" << endl
+       << "rosrun tiny_conversion bag_image_extractor_node ~/test.bag /image_raw /tmp" << endl;
   return;
 }
 
@@ -58,13 +60,18 @@ int main(int argc, char** argv)
     usage();
     return -1;
   }
+  ROS_INFO("Opened bagfile");
 
   vector<string> topic_names = {image_topic_name};
   rosbag::View view(bag, rosbag::TopicQuery(topic_names));
+  const int size = view.size();
+  ROS_INFO("Extract images :%d", view.size());
+  int count = 0;
+  auto wall_time = ros::WallTime::now();
   for (auto m : view)
   {
     sensor_msgs::Image::ConstPtr img_ptr = m.instantiate<sensor_msgs::Image>();
-    if (img_ptr != NULL) continue;
+    if (img_ptr == NULL) continue;
 
     //ros::Time bag_stamp = m.getTime();
     ros::Time header_stamp = img_ptr->header.stamp;;
@@ -94,7 +101,14 @@ int main(int argc, char** argv)
     {
       ROS_ERROR("image is empty");
     }
+    if (ros::WallTime::now() - wall_time > ros::WallDuration(10.0))
+    {
+      cerr << count << "/" << size << endl;;
+      wall_time = ros::WallTime::now();
+    }
+    count++;
   }
+  cout << count <<  " files are saved" << endl;
 
   return 0;
 }
