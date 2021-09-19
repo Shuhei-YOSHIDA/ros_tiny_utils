@@ -15,11 +15,13 @@ find_package(catkin REQUIRED COMPONENTS
     rosbag
     visualization_msgs
     nav_msgs
+    sensor_msgs
     tf2
     tf2_ros
     tf2_geometry_msgs
     color_names
     cv_bridge
+    geodesy
 )
 
 ## System dependencies are found with CMake's conventions
@@ -150,6 +152,7 @@ add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EX
 add_executable(path_to_text_marker_node src/nav_msgs_path_to_text_marker_node.cpp)
 add_executable(sample_resolve_path_node src/sample_resolve_path_node.cpp)
 add_executable(bag_image_extractor src/bag_image_extractor.cpp)
+add_executable(relative_gnss_tf_broadcaster_node src/relative_gnss_tf_broadcaster_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -162,6 +165,7 @@ add_executable(bag_image_extractor src/bag_image_extractor.cpp)
 add_dependencies(path_to_text_marker_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(sample_resolve_path_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(bag_image_extractor ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(relative_gnss_tf_broadcaster_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(path_to_text_marker_node
@@ -175,6 +179,9 @@ target_link_libraries(sample_resolve_path_node
 target_link_libraries(bag_image_extractor
   ${catkin_LIBRARIES}
   ${OpenCV_LIBRARIES}
+)
+target_link_libraries(relative_gnss_tf_broadcaster_node
+  ${catkin_LIBRARIES}
 )
 
 #############
